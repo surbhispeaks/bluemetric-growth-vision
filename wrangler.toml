@@ -1,5 +1,2 @@
-name = "bluemetric-growth-vision"
-compatibility_date = "2025-05-15"
-
-[site]
-bucket = "./dist"
+# wrangler.toml
+name = 'bluemetric-web'
