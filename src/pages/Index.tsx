@@ -11,7 +11,9 @@ const Index = () => {
       <Hero />
       <Differentiators />
       <Benefits />
-      <CallToAction />
+      <div className="bg-bluemetric-darkblue">
+        <CallToAction />
+      </div>
     </Layout>
   );
 };
