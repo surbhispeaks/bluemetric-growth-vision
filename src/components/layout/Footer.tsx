@@ -78,6 +78,7 @@ const Footer = () => {
             <h3 className="font-montserrat font-semibold text-white text-lg mb-4">Contact</h3>
             <p className="text-gray-300 mb-2">
               UF Innovate Hub<br />
+              747 SW 2nd Ave.<br />
               Gainesville, FL
             </p>
             <p className="text-gray-300 mb-4">

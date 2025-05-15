@@ -6,11 +6,11 @@ const Founder = () => {
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="lg:w-1/2">
             <div className="bg-bluemetric-lightbg p-4 rounded-lg shadow-sm">
-              <div className="bg-gradient-to-r from-bluemetric-darkblue to-bluemetric-mediumblue h-64 md:h-96 rounded-md flex items-center justify-center">
-                <div className="bg-bluemetric-lightbg/30 w-32 h-32 rounded-full flex items-center justify-center">
-                  <span className="font-montserrat font-bold text-white text-xl">SA</span>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/f343346b-18d3-456a-b2e4-5d3ba3020363.png" 
+                alt="Surbhi Aggarwal, Founder of BlueMetric" 
+                className="w-full h-auto rounded-md object-cover"
+              />
             </div>
           </div>
           
