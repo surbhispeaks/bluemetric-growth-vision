@@ -1,7 +1,12 @@
 
-import Layout from "@/components/layout/Layout";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import CallToAction from "@/components/home/CallToAction";
+import { 
+  Accordion, 
+  AccordionContent, 
+  AccordionItem, 
+  AccordionTrigger 
+} from "@/components/ui/accordion";
+import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
   const faqs = [
@@ -28,25 +33,29 @@ const FAQ = () => {
   ];
 
   return (
-    <Layout>
-      <section className="py-20 bg-bluemetric-darkblue">
-        <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-montserrat font-semibold text-white mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl text-white/90">
-              Find answers to common questions about our services and approach.
-            </p>
-          </div>
+    <section className="py-20 bg-white">
+      <div className="container mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="font-montserrat font-semibold text-bluemetric-darkblue text-sm uppercase tracking-wider mb-2">
+            Frequently Asked Questions
+          </h2>
+          <div className="w-20 h-1 bg-bluemetric-blue mx-auto mb-6"></div>
+          <h3 className="text-3xl md:text-4xl font-montserrat font-semibold text-bluemetric-darkblue mb-6">
+            Got Questions? We Have Answers
+          </h3>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Here are answers to some common questions about our services and approach.
+          </p>
         </div>
-      </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto max-w-3xl">
+        <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-6">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border border-bluemetric-lightgray rounded-lg overflow-hidden">
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className="border border-bluemetric-lightgray rounded-lg overflow-hidden"
+              >
                 <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-bluemetric-lightbg font-montserrat font-medium text-bluemetric-darkblue text-left">
                   {faq.question}
                 </AccordionTrigger>
@@ -57,12 +66,18 @@ const FAQ = () => {
             ))}
           </Accordion>
         </div>
-      </section>
-      
-      <div className="bg-bluemetric-darkblue">
-        <CallToAction />
+        
+        <div className="text-center mt-12">
+          <Link 
+            to="/faq" 
+            className="inline-flex items-center text-bluemetric-blue hover:text-bluemetric-mediumblue font-montserrat font-medium transition-colors"
+          >
+            View all FAQs
+            <ChevronRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
       </div>
-    </Layout>
+    </section>
   );
 };
 
