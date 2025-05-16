@@ -12,7 +12,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/d5e42f62-3889-4faa-8f91-ad6b484b32c1.png" 
               alt="BlueMetric Logo" 
-              className="h-12 mb-4 brightness-0 invert"
+              className="h-12 mb-4"
             />
             <p className="text-gray-300 mb-4">
               Transforming financial data into actionable business intelligence.
