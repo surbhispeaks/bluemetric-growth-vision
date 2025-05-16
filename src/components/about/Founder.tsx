@@ -10,6 +10,9 @@ const Founder = () => {
                 src="/lovable-uploads/f343346b-18d3-456a-b2e4-5d3ba3020363.png" 
                 alt="Surbhi Aggarwal, Founder of BlueMetric" 
                 className="w-full h-auto rounded-md object-cover"
+                loading="lazy"
+                width="600"
+                height="400"
               />
             </div>
           </div>
