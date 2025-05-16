@@ -2,8 +2,8 @@
 const Philosophy = () => {
   const philosophyPoints = [
     {
-      title: "Beyond Compliance",
-      description: "We believe financial services should go beyond basic tax compliance to drive strategic business growth."
+      title: "Compliance and Beyond",
+      description: "We believe financial services should embrace compliance and go beyond it to drive strategic business growth."
     },
     {
       title: "Data-Driven Decisions",
