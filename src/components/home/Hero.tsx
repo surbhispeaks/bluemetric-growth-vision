@@ -13,7 +13,7 @@ const Hero = () => {
               <span className="text-bluemetric-lightgray">Financial Clarity</span> for Your Business
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-xl">
-              We provide bookkeeping and transform your financial data into actionable business intelligence.
+              We provide bookkeeping services and help transform your financial data into actionable business intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
