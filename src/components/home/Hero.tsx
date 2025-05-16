@@ -9,11 +9,11 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-12 lg:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-montserrat font-semibold text-white leading-tight mb-6">
-              Beyond Bookkeeping: <br />
+              Bookkeeping and Beyond: <br />
               <span className="text-bluemetric-lightgray">Financial Clarity</span> for Growing Businesses
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-xl">
-              BlueMetric transforms your financial data into actionable business intelligence.
+              BlueMetric provides bookkeeping and transforms your financial data into actionable business intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
