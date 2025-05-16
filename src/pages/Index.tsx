@@ -11,7 +11,6 @@ const Index = () => {
       <Hero />
       <Differentiators />
       <Benefits />
-      <FAQ />
       <div className="bg-bluemetric-darkblue">
         <CallToAction />
       </div>
