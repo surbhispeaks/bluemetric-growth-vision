@@ -18,7 +18,7 @@ const Footer = () => {
               Transforming financial data into actionable business intelligence.
             </p>
             <p className="text-white text-xs uppercase font-montserrat tracking-wider">
-              Numbers That Count
+              Numbers And Beyond
             </p>
           </div>
           
