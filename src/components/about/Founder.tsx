@@ -32,7 +32,7 @@ const Founder = () => {
               </p>
               
               <p>
-                Her approach has been shaped by analyzing businesses across more than 20 sectors, launching entrepreneurial ventures, and guiding fellow business owners as a SCORE mentor.
+                Her approach has been shaped by analyzing businesses across more than 20 sectors and launching entrepreneurial ventures, giving her a comprehensive understanding of business challenges and opportunities.
               </p>
               
               <p>
