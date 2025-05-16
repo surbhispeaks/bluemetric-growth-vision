@@ -11,7 +11,7 @@ const ServiceHero = () => {
             Our Services
           </h1>
           <p className="text-xl text-white/90 mb-8">
-            We provide a comprehensive suite of financial services tailored to help your business grow with clarity and confidence.
+            We provide a comprehensive suite of financial services - from essential bookkeeping to advanced analytics - tailored to help your business grow with clarity and confidence.
           </p>
           <Link to="/contact">
             <Button className="bg-white hover:bg-bluemetric-lightgray text-bluemetric-darkblue font-montserrat font-medium">
