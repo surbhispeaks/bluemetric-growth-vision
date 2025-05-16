@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/d5e42f62-3889-4faa-8f91-ad6b484b32c1.png" 
+              src="/lovable-uploads/49916e99-9bf8-435e-b1ae-2892adabe9bb.png" 
               alt="BlueMetric Logo" 
               className="h-10 md:h-12"
             />
@@ -36,6 +36,9 @@ const Navbar = () => {
             </Link>
             <Link to="/insights" className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium">
               Insights
+            </Link>
+            <Link to="/faq" className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium">
+              FAQ
             </Link>
             <Link to="/contact">
               <Button className="bg-bluemetric-blue hover:bg-bluemetric-mediumblue text-white font-montserrat">
@@ -91,6 +94,13 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Insights
+              </Link>
+              <Link 
+                to="/faq" 
+                className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
               </Link>
               <Link 
                 to="/contact" 

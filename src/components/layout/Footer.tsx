@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <img 
-              src="/lovable-uploads/d5e42f62-3889-4faa-8f91-ad6b484b32c1.png" 
+              src="/lovable-uploads/49916e99-9bf8-435e-b1ae-2892adabe9bb.png" 
               alt="BlueMetric Logo" 
               className="h-12 mb-4"
             />
