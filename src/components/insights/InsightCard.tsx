@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Calendar } from "lucide-react";
 
 interface InsightCardProps {
   title: string;
@@ -8,17 +9,28 @@ interface InsightCardProps {
   category: string;
   slug: string;
   date: string;
+  featured?: boolean;
 }
 
-const InsightCard = ({ title, excerpt, category, slug, date }: InsightCardProps) => {
+const InsightCard = ({ 
+  title, 
+  excerpt, 
+  category, 
+  slug, 
+  date,
+  featured = false 
+}: InsightCardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-bluemetric-lightgray/30 overflow-hidden">
+    <div className={`${
+      featured ? "border-t-4 border-t-bluemetric-blue" : ""
+    } bg-white rounded-lg shadow-sm border border-bluemetric-lightgray/30 overflow-hidden hover:shadow-md transition-shadow`}>
       <div className="p-8">
         <div className="flex items-center gap-4 mb-4">
           <span className="text-sm font-montserrat font-medium text-bluemetric-blue">
             {category}
           </span>
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-gray-500 flex items-center">
+            <Calendar className="h-3 w-3 mr-1" />
             {date}
           </span>
         </div>
