@@ -22,8 +22,8 @@ const ContactInfo = () => {
           <h4 className="font-montserrat font-medium text-bluemetric-darkblue mb-2">
             Email
           </h4>
-          <a href="mailto:info@bluemetric.com" className="text-bluemetric-blue hover:underline">
-            info@bluemetric.com
+          <a href="mailto:hello@blue-metric.com" className="text-bluemetric-blue hover:underline">
+            hello@blue-metric.com
           </a>
         </div>
         
