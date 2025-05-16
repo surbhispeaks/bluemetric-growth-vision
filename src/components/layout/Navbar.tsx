@@ -1,11 +1,16 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -25,19 +30,54 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium">
+            <Link 
+              to="/" 
+              className={`font-montserrat transition-colors font-medium ${
+                isActive('/') 
+                  ? 'text-bluemetric-blue border-b-2 border-bluemetric-blue' 
+                  : 'text-gray-700 hover:text-bluemetric-blue'
+              }`}
+            >
               Home
             </Link>
-            <Link to="/services" className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium">
+            <Link 
+              to="/services" 
+              className={`font-montserrat transition-colors font-medium ${
+                isActive('/services') 
+                  ? 'text-bluemetric-blue border-b-2 border-bluemetric-blue' 
+                  : 'text-gray-700 hover:text-bluemetric-blue'
+              }`}
+            >
               Services
             </Link>
-            <Link to="/about" className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium">
+            <Link 
+              to="/about" 
+              className={`font-montserrat transition-colors font-medium ${
+                isActive('/about') 
+                  ? 'text-bluemetric-blue border-b-2 border-bluemetric-blue' 
+                  : 'text-gray-700 hover:text-bluemetric-blue'
+              }`}
+            >
               About
             </Link>
-            <Link to="/insights" className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium">
+            <Link 
+              to="/insights" 
+              className={`font-montserrat transition-colors font-medium ${
+                isActive('/insights') 
+                  ? 'text-bluemetric-blue border-b-2 border-bluemetric-blue' 
+                  : 'text-gray-700 hover:text-bluemetric-blue'
+              }`}
+            >
               Insights
             </Link>
-            <Link to="/faq" className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium">
+            <Link 
+              to="/faq" 
+              className={`font-montserrat transition-colors font-medium ${
+                isActive('/faq') 
+                  ? 'text-bluemetric-blue border-b-2 border-bluemetric-blue' 
+                  : 'text-gray-700 hover:text-bluemetric-blue'
+              }`}
+            >
               FAQ
             </Link>
             <Link to="/contact">
@@ -69,35 +109,55 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/" 
-                className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium"
+                className={`font-montserrat transition-colors font-medium ${
+                  isActive('/') 
+                    ? 'text-bluemetric-blue border-l-4 border-bluemetric-blue pl-2' 
+                    : 'text-gray-700 hover:text-bluemetric-blue'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 to="/services" 
-                className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium"
+                className={`font-montserrat transition-colors font-medium ${
+                  isActive('/services') 
+                    ? 'text-bluemetric-blue border-l-4 border-bluemetric-blue pl-2' 
+                    : 'text-gray-700 hover:text-bluemetric-blue'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
               <Link 
                 to="/about" 
-                className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium"
+                className={`font-montserrat transition-colors font-medium ${
+                  isActive('/about') 
+                    ? 'text-bluemetric-blue border-l-4 border-bluemetric-blue pl-2' 
+                    : 'text-gray-700 hover:text-bluemetric-blue'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link 
                 to="/insights" 
-                className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium"
+                className={`font-montserrat transition-colors font-medium ${
+                  isActive('/insights') 
+                    ? 'text-bluemetric-blue border-l-4 border-bluemetric-blue pl-2' 
+                    : 'text-gray-700 hover:text-bluemetric-blue'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Insights
               </Link>
               <Link 
                 to="/faq" 
-                className="font-montserrat text-gray-700 hover:text-bluemetric-blue transition-colors font-medium"
+                className={`font-montserrat transition-colors font-medium ${
+                  isActive('/faq') 
+                    ? 'text-bluemetric-blue border-l-4 border-bluemetric-blue pl-2' 
+                    : 'text-gray-700 hover:text-bluemetric-blue'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
