@@ -14,7 +14,7 @@ const Services = () => {
       title: "Bookkeeping & Financial Reporting",
       description: "Our bookkeeping services establish the accurate financial records essential for both compliance and insight. Rather than viewing bookkeeping as a necessary burden, we approach it as the foundation for meaningful business intelligence.",
       deliverables: [
-        "Clean, organized financial records in QuickBooks Online",
+        "Clean, organized financial records in QuickBooks or any other software",
         "Monthly reconciliations ensuring accuracy",
         "Clear financial statements (Income Statement, Balance Sheet, Cash Flow)",
         "Custom reports aligned with your decision-making needs",
@@ -44,7 +44,7 @@ const Services = () => {
       deliverables: [
         "Evaluation of current financial processes and pain points",
         "Custom system design tailored to your business needs",
-        "Software selection and implementation (QuickBooks and integrations)",
+        "Software selection and implementation (QuickBooks or any other)",
         "Process documentation and team training",
         "Ongoing system refinement and optimization"
       ],
