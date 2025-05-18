@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
@@ -9,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { toast } from "sonner";
 import { useBlogContext } from "@/context/BlogContext";
-import { ArrowLeft, Save, Bold, Italic, Underline, ListOrdered, ListUnordered, Code, Heading1, Heading2, Heading3, Quote, Link } from "lucide-react";
+import { ArrowLeft, Save, Bold, Italic, Underline, ListOrdered, List, Code, Heading1, Heading2, Heading3, Quote, Link } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 const BlogEditor = () => {
@@ -297,7 +296,7 @@ const BlogEditor = () => {
                         <Quote className="h-4 w-4" />
                       </ToggleGroupItem>
                       <ToggleGroupItem value="list-unordered" aria-label="Insert unordered list" onClick={() => insertTextFormat('list-unordered')}>
-                        <ListUnordered className="h-4 w-4" />
+                        <List className="h-4 w-4" />
                       </ToggleGroupItem>
                       <ToggleGroupItem value="list-ordered" aria-label="Insert ordered list" onClick={() => insertTextFormat('list-ordered')}>
                         <ListOrdered className="h-4 w-4" />
