@@ -23,8 +23,22 @@ jobs:
           node-version: 18
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+     - name: Install dependencies and synchronize package files
+        run: |
+          npm ci
+          # The following command will update package-lock.json to match package.json
+          npm install --package-lock-only
+          # Check if there are changes to package-lock.json
+          if git diff --name-only | grep -q "package-lock.json"; then
+            echo "package-lock.json was updated, committing changes"
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add package-lock.json
+            git commit -m "Synchronize package-lock.json with package.json"
+            git push
+          else
+            echo "package-lock.json is already synchronized"
+          fi
 
       - name: Build
         run: npm run build
