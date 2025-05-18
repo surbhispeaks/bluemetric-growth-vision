@@ -21,7 +21,8 @@ const Services = () => {
         "Secure, accessible financial documentation"
       ],
       difference: "While many bookkeepers focus solely on recording transactions, we structure your financial information to reveal the stories behind the numbers. Our approach ensures you're not just compliant, but informed.",
-      icon: <FileText size={28} />
+      icon: <FileText size={28} />,
+      imageType: "document"
     },
     {
       id: "performance",
@@ -35,7 +36,8 @@ const Services = () => {
         "Strategic recommendations based on performance data"
       ],
       difference: "Our investment analysis background allows us to look beyond basic financial metrics to identify the true drivers of your business success, helping you focus on what truly matters.",
-      icon: <TrendingUp size={28} />
+      icon: <TrendingUp size={28} />,
+      imageType: "chart"
     },
     {
       id: "systems",
@@ -49,7 +51,8 @@ const Services = () => {
         "Ongoing system refinement and optimization"
       ],
       difference: "We don't just set up software; we create comprehensive financial ecosystems that integrate with your business operations and evolve as you grow.",
-      icon: <Settings size={28} />
+      icon: <Settings size={28} />,
+      imageType: "dashboard"
     },
     {
       id: "advisory",
@@ -63,7 +66,8 @@ const Services = () => {
         "Scenario planning for business decisions"
       ],
       difference: "Our advisory services combine technical financial expertise with practical business experience, offering guidance that's both rigorous and realistic for entrepreneurs.",
-      icon: <BookOpen size={28} />
+      icon: <BookOpen size={28} />,
+      imageType: "report"
     }
   ];
 

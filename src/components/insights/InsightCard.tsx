@@ -9,7 +9,6 @@ interface InsightCardProps {
   category: string;
   slug: string;
   date: string;
-  featured?: boolean;
 }
 
 const InsightCard = ({ 
@@ -18,12 +17,9 @@ const InsightCard = ({
   category, 
   slug, 
   date,
-  featured = false 
 }: InsightCardProps) => {
   return (
-    <div className={`${
-      featured ? "border-t-4 border-t-bluemetric-blue" : ""
-    } bg-white rounded-lg shadow-sm border border-bluemetric-lightgray/30 overflow-hidden hover:shadow-md transition-shadow`}>
+    <div className="bg-white rounded-lg shadow-sm border border-bluemetric-lightgray/30 overflow-hidden hover:shadow-md transition-shadow border-t-4 border-t-bluemetric-blue">
       <div className="p-8">
         <div className="flex items-center gap-4 mb-4">
           <span className="text-sm font-montserrat font-medium text-bluemetric-blue">

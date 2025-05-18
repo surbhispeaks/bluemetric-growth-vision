@@ -12,6 +12,8 @@ import InsightDetail from "./pages/InsightDetail";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
+import BlogManagement from "./pages/BlogManagement";
+import BlogEditor from "./pages/BlogEditor";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,12 @@ const App = () => (
           <Route path="/insights/:slug" element={<InsightDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          
+          {/* Admin blog management routes */}
+          <Route path="/admin/blogs" element={<BlogManagement />} />
+          <Route path="/admin/blogs/new" element={<BlogEditor />} />
+          <Route path="/admin/blogs/edit/:slug" element={<BlogEditor />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

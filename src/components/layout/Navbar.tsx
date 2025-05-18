@@ -80,6 +80,16 @@ const Navbar = () => {
             >
               FAQ
             </Link>
+            <Link 
+              to="/contact" 
+              className={`font-montserrat transition-colors font-medium ${
+                isActive('/contact') 
+                  ? 'text-bluemetric-blue border-b-2 border-bluemetric-blue' 
+                  : 'text-gray-700 hover:text-bluemetric-blue'
+              }`}
+            >
+              Contact
+            </Link>
             <Link to="/contact">
               <Button className="bg-bluemetric-blue hover:bg-bluemetric-mediumblue text-white font-montserrat">
                 Book a Consultation
@@ -161,6 +171,17 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
+              </Link>
+              <Link 
+                to="/contact" 
+                className={`font-montserrat transition-colors font-medium ${
+                  isActive('/contact') 
+                    ? 'text-bluemetric-blue border-l-4 border-bluemetric-blue pl-2' 
+                    : 'text-gray-700 hover:text-bluemetric-blue'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
               </Link>
               <Link 
                 to="/contact" 
