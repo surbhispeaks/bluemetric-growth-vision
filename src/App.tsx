@@ -14,33 +14,36 @@ import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import BlogManagement from "./pages/BlogManagement";
 import BlogEditor from "./pages/BlogEditor";
+import { BlogProvider } from "./context/BlogContext";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/insights/:slug" element={<InsightDetail />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/faq" element={<FAQ />} />
-          
-          {/* Admin blog management routes */}
-          <Route path="/admin/blogs" element={<BlogManagement />} />
-          <Route path="/admin/blogs/new" element={<BlogEditor />} />
-          <Route path="/admin/blogs/edit/:slug" element={<BlogEditor />} />
-          
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <BlogProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:slug" element={<InsightDetail />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
+            
+            {/* Admin blog management routes */}
+            <Route path="/admin/blogs" element={<BlogManagement />} />
+            <Route path="/admin/blogs/new" element={<BlogEditor />} />
+            <Route path="/admin/blogs/edit/:slug" element={<BlogEditor />} />
+            
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </BlogProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import { insights, categories } from "@/data/insights";
+import { useBlogContext } from "@/context/BlogContext";
 import { Calendar, Edit, Plus, Search, Trash2 } from "lucide-react";
 import {
   Table,
@@ -30,13 +30,14 @@ import {
 
 const BlogManagement = () => {
   const navigate = useNavigate();
+  const { blogs, deleteBlog } = useBlogContext();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [blogToDelete, setBlogToDelete] = useState<string | null>(null);
   
   // Filter blogs based on search and category
-  const filteredBlogs = insights.filter(blog => {
+  const filteredBlogs = blogs.filter(blog => {
     const matchesSearch = blog.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
                          blog.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === "All Categories" || blog.category === selectedCategory;
@@ -59,10 +60,13 @@ const BlogManagement = () => {
   
   const handleDelete = () => {
     if (blogToDelete) {
-      // In a real app, we'd delete from the database
-      // For this demo, we'll just show a success message
+      // Find blog title for toast message
+      const blogTitle = blogs.find(blog => blog.slug === blogToDelete)?.title;
       
-      const blogTitle = insights.find(blog => blog.slug === blogToDelete)?.title;
+      // Delete the blog
+      deleteBlog(blogToDelete);
+      
+      // Show success message
       toast.success(`Blog "${blogTitle}" has been deleted`);
       
       // Close dialog and reset state
@@ -113,7 +117,7 @@ const BlogManagement = () => {
                     <SelectValue placeholder="Filter by category" />
                   </SelectTrigger>
                   <SelectContent>
-                    {categories.map((category) => (
+                    {useBlogContext().categories.map((category) => (
                       <SelectItem key={category} value={category}>
                         {category}
                       </SelectItem>

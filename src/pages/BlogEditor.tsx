@@ -8,12 +8,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { toast } from "sonner";
-import { insights, categories } from "@/data/insights";
+import { useBlogContext } from "@/context/BlogContext";
 import { ArrowLeft, Save } from "lucide-react";
 
 const BlogEditor = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const { blogs, addBlog, updateBlog, getBlogBySlug, categories } = useBlogContext();
   const isEditing = Boolean(slug);
   
   const [formData, setFormData] = useState({
@@ -26,8 +27,8 @@ const BlogEditor = () => {
   });
   
   useEffect(() => {
-    if (isEditing) {
-      const existingBlog = insights.find(blog => blog.slug === slug);
+    if (isEditing && slug) {
+      const existingBlog = getBlogBySlug(slug);
       if (existingBlog) {
         setFormData({
           title: existingBlog.title,
@@ -35,14 +36,14 @@ const BlogEditor = () => {
           category: existingBlog.category,
           slug: existingBlog.slug,
           date: existingBlog.date,
-          content: "" // In a real app, we'd fetch the full content
+          content: existingBlog.content || "" // Use content if available
         });
       } else {
         toast.error("Blog post not found");
         navigate('/admin/blogs');
       }
     }
-  }, [slug, isEditing, navigate]);
+  }, [slug, isEditing, getBlogBySlug, navigate]);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -76,6 +77,14 @@ const BlogEditor = () => {
     }));
   };
   
+  const validateSlug = (slug: string): boolean => {
+    // Skip validation for the current blog when editing
+    if (isEditing && formData.slug === slug) return true;
+    
+    // Check if slug already exists in other blogs
+    return !blogs.some(blog => blog.slug === slug);
+  };
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -85,19 +94,22 @@ const BlogEditor = () => {
       return;
     }
     
-    // Here we would typically save to a database
-    // For this demo, we'll just show a success message
+    // Validate slug uniqueness
+    if (!validateSlug(formData.slug)) {
+      toast.error("This URL slug is already in use. Please modify it to be unique.");
+      return;
+    }
     
-    if (isEditing) {
+    // Save the blog
+    if (isEditing && slug) {
+      updateBlog(slug, formData);
       toast.success(`Blog "${formData.title}" has been updated`);
     } else {
+      addBlog(formData);
       toast.success(`Blog "${formData.title}" has been created`);
     }
     
-    // In a real app with a database we would:
-    // 1. Save the blog data
-    // 2. Redirect to the blog list or the published blog
-    
+    // Navigate back to blog management
     navigate('/admin/blogs');
   };
   

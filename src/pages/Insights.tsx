@@ -4,7 +4,7 @@ import Layout from "@/components/layout/Layout";
 import InsightHero from "@/components/insights/InsightHero";
 import InsightCard from "@/components/insights/InsightCard";
 import CallToAction from "@/components/home/CallToAction";
-import { insights } from "@/data/insights";
+import { useBlogContext } from "@/context/BlogContext";
 import {
   Pagination,
   PaginationContent,
@@ -15,7 +15,8 @@ import {
 } from "@/components/ui/pagination";
 
 const Insights = () => {
-  const [filteredInsights, setFilteredInsights] = useState(insights);
+  const { blogs } = useBlogContext();
+  const [filteredInsights, setFilteredInsights] = useState(blogs);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [searchTerm, setSearchTerm] = useState("");
@@ -23,7 +24,7 @@ const Insights = () => {
   const itemsPerPage = 6;
   
   useEffect(() => {
-    let results = insights;
+    let results = blogs;
     
     // Apply category filter
     if (selectedCategory !== "All Categories") {
@@ -42,7 +43,7 @@ const Insights = () => {
     
     setFilteredInsights(results);
     setCurrentPage(1); // Reset to first page when filters change
-  }, [selectedCategory, searchTerm]);
+  }, [selectedCategory, searchTerm, blogs]);
   
   const totalPages = Math.ceil(filteredInsights.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
