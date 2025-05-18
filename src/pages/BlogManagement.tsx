@@ -30,7 +30,7 @@ import {
 
 const BlogManagement = () => {
   const navigate = useNavigate();
-  const { blogs, deleteBlog } = useBlogContext();
+  const { blogs, deleteBlog, categories } = useBlogContext();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
@@ -117,7 +117,7 @@ const BlogManagement = () => {
                     <SelectValue placeholder="Filter by category" />
                   </SelectTrigger>
                   <SelectContent>
-                    {useBlogContext().categories.map((category) => (
+                    {categories.map((category) => (
                       <SelectItem key={category} value={category}>
                         {category}
                       </SelectItem>

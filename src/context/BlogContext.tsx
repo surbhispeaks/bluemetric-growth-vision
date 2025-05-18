@@ -1,6 +1,6 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { insights as initialInsights, categories } from '@/data/insights';
+import { insights as initialInsights, categories as initialCategories } from '@/data/insights';
 
 export interface Blog {
   title: string;
@@ -13,6 +13,7 @@ export interface Blog {
 
 interface BlogContextType {
   blogs: Blog[];
+  categories: string[];
   addBlog: (blog: Blog) => void;
   updateBlog: (slug: string, updatedBlog: Blog) => void;
   deleteBlog: (slug: string) => void;
@@ -67,6 +68,7 @@ export const BlogProvider: React.FC<BlogProviderProps> = ({ children }) => {
 
   const value = {
     blogs,
+    categories: initialCategories,
     addBlog,
     updateBlog,
     deleteBlog,
@@ -76,19 +78,7 @@ export const BlogProvider: React.FC<BlogProviderProps> = ({ children }) => {
   return <BlogContext.Provider value={value}>{children}</BlogContext.Provider>;
 };
 
-export const categories = [
-  "All Categories",
-  "Performance Metrics", 
-  "Financial Systems", 
-  "Cash Flow", 
-  "Financial Literacy", 
-  "Tax Planning", 
-  "Startups", 
-  "Financial Planning", 
-  "Financial Advisory", 
-  "Pricing Strategy", 
-  "Financial Leadership", 
-  "Business Financing"
-];
+// Remove the duplicate categories export
+// We'll use the one from data/insights.ts
 
 export default BlogContext;
