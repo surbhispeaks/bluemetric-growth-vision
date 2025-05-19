@@ -21,20 +21,20 @@ const Differentiators = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-montserrat font-semibold text-bluemetric-darkblue text-sm uppercase tracking-wider mb-2">
+          <h2 className="font-montserrat font-semibold text-bluemetric-darkblue text-sm uppercase tracking-wider mb-3">
             The BlueMetric Difference
           </h2>
-          <div className="w-20 h-1 bg-bluemetric-blue mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-bluemetric-blue mx-auto mb-6"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {differentiators.map((item) => (
             <div 
               key={item.title} 
-              className="bg-bluemetric-lightbg rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-bluemetric-lightgray/50"
+              className="bg-bluemetric-lightbg rounded-lg p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-bluemetric-lightgray/30 transform hover:translateY(-5px)"
             >
               <div className="bg-bluemetric-blue/10 p-4 rounded-full inline-flex mb-6">
                 <item.icon className="h-8 w-8 text-bluemetric-blue" />

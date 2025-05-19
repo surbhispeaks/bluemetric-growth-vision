@@ -22,8 +22,8 @@ const Layout = ({ children }: LayoutProps) => {
         }
       }, 100);
     } else {
-      // If no hash, scroll to top
-      window.scrollTo(0, 0);
+      // If no hash, scroll to top with smooth animation
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [pathname, hash]);
 

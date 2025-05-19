@@ -1,11 +1,12 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   
   const isActive = (path: string) => {
@@ -15,10 +16,29 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
+  // Add scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto py-4">
+    <nav className={`bg-white sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'shadow-md py-2' : 'shadow-sm py-4'
+    }`}>
+      <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
@@ -91,7 +111,7 @@ const Navbar = () => {
               Contact
             </Link>
             <Link to="/contact">
-              <Button className="bg-bluemetric-blue hover:bg-bluemetric-mediumblue text-white font-montserrat">
+              <Button className="bg-bluemetric-blue hover:bg-bluemetric-mediumblue text-white font-montserrat shadow-md hover:shadow-lg transition-all duration-300">
                 Book a Consultation
               </Button>
             </Link>
@@ -115,7 +135,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4">
+          <div className="md:hidden mt-4 pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/" 

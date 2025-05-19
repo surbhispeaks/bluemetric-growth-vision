@@ -22,20 +22,20 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-20 bg-bluemetric-lightbg">
+    <section className="py-24 bg-bluemetric-lightbg">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-montserrat font-semibold text-bluemetric-darkblue text-sm uppercase tracking-wider mb-2">
+          <h2 className="font-montserrat font-semibold text-bluemetric-darkblue text-sm uppercase tracking-wider mb-3">
             What This Means For Your Business
           </h2>
-          <div className="w-20 h-1 bg-bluemetric-blue mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-bluemetric-blue mx-auto mb-6"></div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit) => (
             <div 
               key={benefit.title} 
-              className="bg-white p-8 rounded-lg border-t-4 border-bluemetric-blue shadow-sm"
+              className="bg-white p-8 rounded-lg border-t-4 border-bluemetric-blue shadow-md hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-start mb-4">
                 <CheckCircle className="text-bluemetric-blue h-6 w-6 mr-2 flex-shrink-0 mt-1" />
