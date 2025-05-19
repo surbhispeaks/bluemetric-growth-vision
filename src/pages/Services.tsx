@@ -77,11 +77,12 @@ const Services = () => {
       <section className="py-10 bg-white">
         <div className="container mx-auto">
           {services.map((service, index) => (
-            <ServiceCard
-              key={service.id}
-              {...service}
-              isReversed={index % 2 !== 0}
-            />
+            <div id={service.id} key={service.id}>
+              <ServiceCard
+                {...service}
+                isReversed={index % 2 !== 0}
+              />
+            </div>
           ))}
         </div>
       </section>

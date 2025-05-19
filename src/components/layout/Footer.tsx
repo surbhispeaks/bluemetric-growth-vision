@@ -10,6 +10,14 @@ const ScrollToTop = () => {
   useEffect(() => {
     if (!hash) {
       window.scrollTo(0, 0);
+    } else {
+      // When hash is present, wait for the page to render and then scroll to the element
+      setTimeout(() => {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0);
     }
   }, [pathname, hash]);
 
@@ -43,22 +51,22 @@ const Footer = () => {
               <h3 className="font-montserrat font-semibold text-white text-lg mb-4">Services</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                  <Link to="/services#bookkeeping" className="text-gray-300 hover:text-white transition-colors">
                     Bookkeeping & Reporting
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                  <Link to="/services#performance" className="text-gray-300 hover:text-white transition-colors">
                     Performance Metrics
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                  <Link to="/services#systems" className="text-gray-300 hover:text-white transition-colors">
                     Financial Systems
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                  <Link to="/services#advisory" className="text-gray-300 hover:text-white transition-colors">
                     Business Advisory
                   </Link>
                 </li>
