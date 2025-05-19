@@ -43,16 +43,27 @@
   }
 
   body {
-    @apply bg-bluemetric-lightbg text-foreground font-opensans;
+    @apply bg-bluemetric-lightbg text-foreground font-opensans overflow-x-hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-montserrat font-semibold text-bluemetric-darkblue;
   }
+  
+  /* Improve touch targets for mobile */
+  button, a {
+    @apply min-h-[44px] focus:outline-none focus:ring-2 focus:ring-bluemetric-blue/30;
+  }
 }
 
 .container {
-  @apply px-5 mx-auto;
+  @apply px-4 mx-auto;
+}
+
+@media (min-width: 640px) {
+  .container {
+    @apply px-5;
+  }
 }
 
 @media (min-width: 768px) {
@@ -67,14 +78,62 @@
   }
 }
 
+/* Mobile-first card styles */
+.mobile-card {
+  @apply w-full rounded-lg shadow-md p-5 bg-white transition-all duration-300;
+}
+
+@media (min-width: 768px) {
+  .mobile-card {
+    @apply p-8;
+  }
+}
+
 /* Animations */
 @keyframes fade-in {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes slide-in-bottom {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-left {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
 .animate-fade-in {
   animation: fade-in 0.3s ease-out forwards;
+}
+
+.animate-slide-in-bottom {
+  animation: slide-in-bottom 0.4s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.4s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.4s ease-out forwards;
+}
+
+/* Mobile-first animations with reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-in-bottom,
+  .animate-slide-in-left,
+  .animate-slide-in-right {
+    animation: none;
+  }
 }
 
 /* Transitions */
@@ -91,4 +150,20 @@
 
 .hover-lift:hover {
   transform: translateY(-5px);
+}
+
+/* Mobile-friendly buttons */
+.mobile-button {
+  @apply w-full flex justify-center items-center text-center px-6 py-4 rounded-md shadow-md transition-all duration-300;
+}
+
+@media (min-width: 640px) {
+  .mobile-button {
+    @apply w-auto;
+  }
+}
+
+/* Improved mobile navigation */
+.mobile-nav-link {
+  @apply block w-full py-3 px-4 text-left;
 }

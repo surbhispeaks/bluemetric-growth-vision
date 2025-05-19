@@ -74,10 +74,10 @@ const Services = () => {
   return (
     <Layout>
       <ServiceHero />
-      <section className="py-10 bg-white">
+      <section className="py-8 md:py-10 bg-white px-4 md:px-0">
         <div className="container mx-auto">
           {services.map((service, index) => (
-            <div id={service.id} key={service.id}>
+            <div id={service.id} key={service.id} className="py-4 md:py-8">
               <ServiceCard
                 {...service}
                 isReversed={index % 2 !== 0}
