@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -35,7 +34,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             <div>
               <img 
-                src="/lovable-uploads/49916e99-9bf8-435e-b1ae-2892adabe9bb.png" 
+                src="/lovable-uploads/21f0f4a4-4cd3-4a87-a4f1-d507622aa4e7.png" 
                 alt="BlueMetric Logo" 
                 className="h-12 mb-6 brightness-0 invert"
               />
