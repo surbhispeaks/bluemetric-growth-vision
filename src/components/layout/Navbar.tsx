@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center group">
             <img 
-              src="/lovable-uploads/25b3be35-6752-421a-945e-760affb75f74.png" 
+              src="/lovable-uploads/69266f11-ec98-405c-8f3e-195020c4e0ba.png" 
               alt="BlueMetric Logo" 
               className="h-10 md:h-12 transition-transform duration-300 group-hover:scale-105"
             />
