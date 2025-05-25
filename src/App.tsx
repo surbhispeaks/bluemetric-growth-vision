@@ -11,6 +11,8 @@ import Insights from "./pages/Insights";
 import InsightDetail from "./pages/InsightDetail";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import BlogManagement from "./pages/BlogManagement";
 import BlogEditor from "./pages/BlogEditor";
@@ -33,6 +35,8 @@ const App = () => (
             <Route path="/insights/:slug" element={<InsightDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
             
             {/* Admin blog management routes */}
             <Route path="/admin/blogs" element={<BlogManagement />} />
