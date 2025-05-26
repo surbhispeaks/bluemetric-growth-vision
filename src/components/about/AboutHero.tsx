@@ -1,7 +1,4 @@
 
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
 const AboutHero = () => {
   return (
     <section className="py-24 bg-gradient-to-r from-bluemetric-darkblue to-bluemetric-mediumblue">
@@ -13,11 +10,6 @@ const AboutHero = () => {
           <p className="text-xl text-white/90 mb-10">
             We're on a mission to transform how businesses view their financial information—not as a compliance requirement, but as their most valuable strategic asset.
           </p>
-          <Link to="/contact">
-            <Button className="bg-white hover:bg-bluemetric-lightgray text-bluemetric-darkblue font-montserrat font-medium shadow-lg hover:shadow-xl transition-all duration-300">
-              Work With Us
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
