@@ -106,8 +106,8 @@ const Footer = () => {
                 Gainesville, FL
               </p>
               <p className="text-gray-300 mb-5">
-                <a href="mailto:hello@blue-metric.com" className="hover:text-white transition-colors">
-                  hello@blue-metric.com
+                <a href="mailto:info@blue-metric.com" className="hover:text-white transition-colors">
+                  info@blue-metric.com
                 </a>
               </p>
               <div className="flex space-x-4">
