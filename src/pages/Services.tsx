@@ -21,7 +21,7 @@ const Services = () => {
         "Secure, accessible financial documentation"
       ],
       difference: "While many bookkeepers focus solely on recording transactions, we structure your financial information to reveal the stories behind the numbers. Our approach ensures you're not just compliant, but informed.",
-      icon: <FileText size={28} />,
+      icon: <FileText size={32} />,
       imageType: "document" as "document"
     },
     {
@@ -36,7 +36,7 @@ const Services = () => {
         "Strategic recommendations based on performance data"
       ],
       difference: "Our investment analysis background allows us to look beyond basic financial metrics to identify the true drivers of your business success, helping you focus on what truly matters.",
-      icon: <TrendingUp size={28} />,
+      icon: <TrendingUp size={32} />,
       imageType: "chart" as "chart"
     },
     {
@@ -51,7 +51,7 @@ const Services = () => {
         "Ongoing system refinement and optimization"
       ],
       difference: "We don't just set up software; we create comprehensive financial ecosystems that integrate with your business operations and evolve as you grow.",
-      icon: <Settings size={28} />,
+      icon: <Settings size={32} />,
       imageType: "dashboard" as "dashboard"
     },
     {
@@ -66,7 +66,7 @@ const Services = () => {
         "Scenario planning for business decisions"
       ],
       difference: "Our advisory services combine technical financial expertise with practical business experience, offering guidance that's both rigorous and realistic for entrepreneurs.",
-      icon: <BookOpen size={28} />,
+      icon: <BookOpen size={32} />,
       imageType: "report" as "report"
     }
   ];
@@ -74,10 +74,10 @@ const Services = () => {
   return (
     <Layout>
       <ServiceHero />
-      <section className="py-8 md:py-10 bg-white px-4 md:px-0">
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white via-bluemetric-lightbg/30 to-white px-4 md:px-0">
         <div className="container mx-auto">
           {services.map((service, index) => (
-            <div id={service.id} key={service.id} className="py-4 md:py-8">
+            <div key={service.id} className="mb-8 lg:mb-12 last:mb-0">
               <ServiceCard
                 {...service}
                 isReversed={index % 2 !== 0}
@@ -87,7 +87,9 @@ const Services = () => {
         </div>
       </section>
       <ProcessTimeline />
-      <CallToAction />
+      <div className="bg-gradient-to-b from-bluemetric-lightbg to-bluemetric-darkblue">
+        <CallToAction />
+      </div>
     </Layout>
   );
 };

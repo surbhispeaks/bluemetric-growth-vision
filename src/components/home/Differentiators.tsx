@@ -21,30 +21,35 @@ const Differentiators = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-20 lg:py-32 bg-gradient-to-b from-white to-bluemetric-lightbg">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-montserrat font-semibold text-bluemetric-darkblue text-sm uppercase tracking-wider mb-3">
+        <div className="text-center mb-16 lg:mb-20">
+          <h2 className="font-montserrat font-bold text-bluemetric-darkblue text-sm uppercase tracking-wider mb-4">
             The BlueMetric Difference
           </h2>
-          <div className="w-24 h-1 bg-bluemetric-blue mx-auto mb-6"></div>
+          <div className="w-32 h-1.5 bg-gradient-to-r from-bluemetric-blue to-bluemetric-mediumblue mx-auto mb-8 rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {differentiators.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
+          {differentiators.map((item, index) => (
             <div 
               key={item.title} 
-              className="bg-bluemetric-lightbg rounded-lg p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-bluemetric-lightgray/30 transform hover:translateY(-5px)"
+              className="group bg-white rounded-2xl lg:rounded-3xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 border border-bluemetric-lightgray/30 transform hover:-translate-y-2 relative overflow-hidden"
             >
-              <div className="bg-bluemetric-blue/10 p-4 rounded-full inline-flex mb-6">
-                <item.icon className="h-8 w-8 text-bluemetric-blue" />
+              {/* Background gradient effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-bluemetric-blue/5 via-transparent to-bluemetric-mediumblue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="bg-gradient-to-br from-bluemetric-blue/10 to-bluemetric-mediumblue/10 p-5 lg:p-6 rounded-2xl inline-flex mb-6 lg:mb-8 group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="h-8 w-8 lg:h-10 lg:w-10 text-bluemetric-blue" />
+                </div>
+                <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue mb-4 lg:mb-6 group-hover:text-bluemetric-blue transition-colors duration-300">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  {item.description}
+                </p>
               </div>
-              <h3 className="text-xl font-montserrat font-semibold text-bluemetric-darkblue mb-4">
-                {item.title}
-              </h3>
-              <p className="text-gray-600">
-                {item.description}
-              </p>
             </div>
           ))}
         </div>

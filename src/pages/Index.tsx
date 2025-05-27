@@ -11,7 +11,7 @@ const Index = () => {
       <Hero />
       <Differentiators />
       <Benefits />
-      <div className="bg-bluemetric-darkblue">
+      <div className="bg-gradient-to-b from-bluemetric-lightbg to-bluemetric-darkblue">
         <CallToAction />
       </div>
     </Layout>
