@@ -121,7 +121,7 @@ const Terms = () => {
                     <strong>BlueMetric</strong><br />
                     UF Innovate Hub<br />
                     747 SW 2nd Ave.<br />
-                    Gainesville, FL<br />
+                    Gainesville, FL 32601<br />
                     Email: info@blue-metric.com
                   </p>
                 </div>

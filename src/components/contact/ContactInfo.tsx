@@ -14,7 +14,7 @@ const ContactInfo = () => {
           <address className="not-italic text-gray-600">
             UF Innovate Hub<br />
             747 SW 2nd Ave.<br />
-            Gainesville, FL
+            Gainesville, FL 32601
           </address>
         </div>
         

@@ -103,7 +103,7 @@ const Footer = () => {
               <p className="text-gray-300 mb-3">
                 UF Innovate Hub<br />
                 747 SW 2nd Ave.<br />
-                Gainesville, FL
+                Gainesville, FL 32601
               </p>
               <p className="text-gray-300 mb-5">
                 <a href="mailto:info@blue-metric.com" className="hover:text-white transition-colors">
