@@ -1,3 +1,4 @@
+
 import Layout from "@/components/layout/Layout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CallToAction from "@/components/home/CallToAction";
@@ -76,37 +77,55 @@ const FAQ = () => {
 
   return (
     <Layout>
-      <section className="py-20 bg-bluemetric-darkblue">
-        <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-montserrat font-semibold text-white mb-6">
+      <section className="py-32 lg:py-40 bg-gradient-to-br from-bluemetric-darkblue via-bluemetric-mediumblue to-bluemetric-darkblue relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-bluemetric-blue rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8">
+              <span className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white/90 font-montserrat font-medium text-sm uppercase tracking-wider border border-white/30">
+                Support Center
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold text-white mb-8 lg:mb-10 leading-tight">
               Your Questions Answered
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-xl lg:text-2xl text-white/95 leading-relaxed max-w-3xl mx-auto">
               Get insights into BlueMetric's approach, services, and how we can help your business thrive.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-24 lg:py-32 bg-gradient-to-b from-white to-bluemetric-lightbg">
+        <div className="container mx-auto px-4 max-w-5xl">
           {faqCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-12">
-              <h2 className="text-2xl font-montserrat font-semibold text-bluemetric-darkblue mb-6 pb-2 border-b border-bluemetric-lightgray">
-                {category.category}
-              </h2>
+            <div key={categoryIndex} className="mb-16 lg:mb-20">
+              <div className="text-center mb-12">
+                <span className="inline-block px-4 py-2 bg-bluemetric-blue/10 rounded-full text-bluemetric-blue font-montserrat font-medium text-sm uppercase tracking-wider mb-4">
+                  {category.category}
+                </span>
+                <h2 className="text-3xl lg:text-4xl font-montserrat font-bold text-bluemetric-darkblue">
+                  {category.category}
+                </h2>
+                <div className="w-20 h-1 bg-gradient-to-r from-bluemetric-blue to-bluemetric-mediumblue rounded-full mx-auto mt-6"></div>
+              </div>
+              
               <Accordion type="single" collapsible className="space-y-6">
                 {category.questions.map((faq, faqIndex) => (
                   <AccordionItem 
                     key={`${categoryIndex}-${faqIndex}`} 
                     value={`item-${categoryIndex}-${faqIndex}`} 
-                    className="border border-bluemetric-lightgray rounded-lg overflow-hidden"
+                    className="border border-bluemetric-lightgray/30 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
                   >
-                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-bluemetric-lightbg font-montserrat font-medium text-bluemetric-darkblue text-left">
+                    <AccordionTrigger className="px-8 py-6 hover:no-underline hover:bg-bluemetric-lightbg/50 font-montserrat font-semibold text-bluemetric-darkblue text-left text-lg">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="px-6 py-4 text-gray-600">
+                    <AccordionContent className="px-8 py-6 text-gray-600 leading-relaxed text-lg border-t border-bluemetric-lightgray/20">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -117,7 +136,7 @@ const FAQ = () => {
         </div>
       </section>
       
-      <div className="bg-bluemetric-darkblue">
+      <div className="bg-gradient-to-b from-bluemetric-lightbg to-bluemetric-darkblue">
         <CallToAction />
       </div>
     </Layout>

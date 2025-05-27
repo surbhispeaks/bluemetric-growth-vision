@@ -17,10 +17,13 @@ const ContactMap = () => {
             <h4 className="text-xl font-montserrat font-semibold text-bluemetric-darkblue mb-3">
               Visit Our Office
             </h4>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-4 leading-relaxed">
               UF Innovate Hub<br />
               747 SW 2nd Ave.<br />
               Gainesville, FL 32601
+            </p>
+            <p className="text-sm text-bluemetric-blue font-medium mb-6 bg-bluemetric-lightbg px-4 py-2 rounded-lg">
+              📅 Meetings by appointment only
             </p>
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}

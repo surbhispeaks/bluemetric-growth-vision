@@ -9,9 +9,13 @@ const About = () => {
   return (
     <Layout>
       <AboutHero />
-      <Founder />
+      <div className="bg-gradient-to-b from-white to-bluemetric-lightbg">
+        <Founder />
+      </div>
       <Philosophy />
-      <CallToAction />
+      <div className="bg-gradient-to-b from-bluemetric-lightbg to-bluemetric-darkblue">
+        <CallToAction />
+      </div>
     </Layout>
   );
 };

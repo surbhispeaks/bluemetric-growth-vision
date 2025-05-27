@@ -20,31 +20,52 @@ const Philosophy = () => {
   ];
 
   return (
-    <section className="py-20 bg-bluemetric-lightbg">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-montserrat font-semibold text-bluemetric-darkblue mb-4">
+    <section className="py-24 lg:py-32 bg-gradient-to-br from-bluemetric-lightbg via-white to-bluemetric-lightbg">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-20">
+          <span className="inline-block px-4 py-2 bg-bluemetric-blue/10 rounded-full text-bluemetric-blue font-montserrat font-medium text-sm uppercase tracking-wider mb-6">
+            Our Philosophy
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-bluemetric-darkblue mb-6">
             Our Philosophy
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-bluemetric-blue to-bluemetric-mediumblue rounded-full mx-auto mb-8"></div>
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             At BlueMetric, we approach financial services differently, with a focus on driving business growth through strategic financial insights.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {philosophyPoints.map((point, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-8 rounded-lg shadow-sm border border-bluemetric-lightgray/30"
-            >
-              <h3 className="text-xl font-montserrat font-semibold text-bluemetric-darkblue mb-4">
-                {point.title}
-              </h3>
-              <p className="text-gray-600">
-                {point.description}
-              </p>
-            </div>
-          ))}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            {philosophyPoints.map((point, index) => (
+              <div 
+                key={index} 
+                className="group relative"
+              >
+                {/* Background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-bluemetric-blue/5 to-bluemetric-mediumblue/10 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
+                
+                {/* Main card */}
+                <div className="relative bg-white p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-bluemetric-lightgray/20 transform hover:-translate-y-1">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-bluemetric-blue to-bluemetric-mediumblue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-montserrat font-bold text-lg">
+                        {index + 1}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue mb-4 group-hover:text-bluemetric-blue transition-colors duration-300">
+                        {point.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {point.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
