@@ -24,7 +24,7 @@ const Founder = () => {
                   Meet Our Founder
                 </span>
                 <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-bluemetric-darkblue mb-6">
-                  Surbhi Aggarwal
+                  Surbhi Aggarwal, CFA
                 </h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-bluemetric-blue to-bluemetric-mediumblue rounded-full mb-8"></div>
               </div>
@@ -35,7 +35,7 @@ const Founder = () => {
                 </p>
                 
                 <p>
-                  With qualifications including Chartered Accountancy, Company Secretaryship, and the CFA program (plus ongoing CPA certification), Surbhi offers both technical excellence and strategic insight.
+                  With qualifications including CFA, Chartered Accountancy, and Company Secretaryship (plus ongoing CPA certification), Surbhi offers both technical excellence and strategic insight.
                 </p>
                 
                 <p>
