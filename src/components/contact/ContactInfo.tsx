@@ -1,4 +1,6 @@
 
+import { Button } from "@/components/ui/button";
+
 const ContactInfo = () => {
   return (
     <div className="bg-bluemetric-lightbg rounded-lg p-8">
@@ -35,6 +37,15 @@ const ContactInfo = () => {
             Monday - Friday: 9:00 AM - 5:00 PM<br />
             Saturday & Sunday: Closed
           </p>
+        </div>
+
+        <div className="pt-6">
+          <Button 
+            className="w-full bg-bluemetric-blue hover:bg-bluemetric-mediumblue text-white font-montserrat py-3 h-auto text-lg"
+            onClick={() => window.location.href = '/contact'}
+          >
+            Book Your Consultation
+          </Button>
         </div>
         
         <div className="pt-4 border-t border-bluemetric-lightgray">
