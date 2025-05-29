@@ -24,7 +24,7 @@ const Hero = () => {
               We provide bookkeeping services and help transform your financial data into actionable business intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center lg:justify-start">
-              <Link to="/contact">
+              <Link to="https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com/meetingtype/vTFKAnihlUCH9VBsEpnD4w2?anonymous&ep=mLinkFromTile">
                 <Button className="bg-white hover:bg-bluemetric-lightgray text-bluemetric-darkblue font-montserrat font-semibold text-lg lg:text-xl px-8 lg:px-10 py-6 lg:py-8 h-auto shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 rounded-xl">
                   Book a Consultation
                 </Button>
