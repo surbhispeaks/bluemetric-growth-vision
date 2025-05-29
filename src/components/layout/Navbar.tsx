@@ -132,7 +132,7 @@ const Navbar = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
-            <Link to="/contact">
+            <Link to="https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com/meetingtype/vTFKAnihlUCH9VBsEpnD4w2?anonymous&ep=mLinkFromTile">
               <Button className="bg-gradient-to-r from-bluemetric-blue to-bluemetric-mediumblue hover:from-bluemetric-mediumblue hover:to-bluemetric-darkblue text-white font-montserrat font-medium px-6 py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
                 Book a Consultation
               </Button>
