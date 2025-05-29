@@ -24,7 +24,7 @@ const Philosophy = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <span className="inline-block px-4 py-2 bg-bluemetric-blue/10 rounded-full text-bluemetric-blue font-montserrat font-medium text-sm uppercase tracking-wider mb-6">
-            Our Philosophy
+            How We Work
           </span>
           <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-bluemetric-darkblue mb-6">
             Our Philosophy
