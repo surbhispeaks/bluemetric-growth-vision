@@ -61,7 +61,7 @@ const ContactInfo = () => {
         <div className="pt-6 border-t border-bluemetric-lightgray">
           <Button 
             className="w-full bg-bluemetric-blue hover:bg-bluemetric-mediumblue text-white font-montserrat py-4 h-auto text-lg rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-            onClick={() => window.location.href = 'https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com/meetingtype/vTFKAnihlUCH9VBsEpnD4w2?anonymous&ep=mLinkFromTile'}
+            onClick={() => window.location.href = 'https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com?anonymous&ep=plink'}
           >
             Book A Meeting
           </Button>
