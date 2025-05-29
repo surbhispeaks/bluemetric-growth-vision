@@ -35,7 +35,7 @@ const Founder = () => {
                 </p>
                 
                 <p>
-                  With qualifications including CFA, Chartered Accountancy, and Company Secretaryship (plus ongoing CPA certification), Surbhi offers both technical excellence and strategic insight.
+                  With qualifications including CFA, Chartered Accountancy (India), and Company Secretaryship (India), Surbhi offers both technical excellence and strategic insight.
                 </p>
                 
                 <p>
