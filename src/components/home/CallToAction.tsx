@@ -20,7 +20,7 @@ const CallToAction = () => {
             <p className="text-white/95 text-lg lg:text-xl mb-10 lg:mb-12 max-w-3xl mx-auto leading-relaxed">
               Schedule a consultation to discuss how BlueMetric can provide the financial clarity your growing business needs.
             </p>
-            <Link to="https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com/meetingtype/vTFKAnihlUCH9VBsEpnD4w2?anonymous&ep=mLinkFromTile">
+            <Link to="https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com?anonymous&ep=plink">
               <Button className="bg-white hover:bg-bluemetric-lightgray text-bluemetric-darkblue font-montserrat font-bold text-lg lg:text-xl px-10 lg:px-12 py-6 lg:py-8 h-auto shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 rounded-xl">
                 Book Your Consultation
               </Button>
