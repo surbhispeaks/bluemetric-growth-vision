@@ -1,4 +1,3 @@
-
 import Layout from "@/components/layout/Layout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CallToAction from "@/components/home/CallToAction";
@@ -106,9 +105,6 @@ const FAQ = () => {
           {faqCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-16 lg:mb-20">
               <div className="text-center mb-12">
-                <span className="inline-block px-4 py-2 bg-bluemetric-blue/10 rounded-full text-bluemetric-blue font-montserrat font-medium text-sm uppercase tracking-wider mb-4">
-                  {category.category}
-                </span>
                 <h2 className="text-3xl lg:text-4xl font-montserrat font-bold text-bluemetric-darkblue">
                   {category.category}
                 </h2>
