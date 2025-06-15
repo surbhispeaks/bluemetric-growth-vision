@@ -1,10 +1,15 @@
 
+import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import ContactHero from "@/components/contact/ContactHero";
 import ContactInfo from "@/components/contact/ContactInfo";
 import ContactMap from "@/components/contact/ContactMap";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact Us | BlueMetric";
+  }, []);
+
   return (
     <Layout>
       <ContactHero />

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import InsightHero from "@/components/insights/InsightHero";
@@ -15,6 +14,10 @@ import {
 } from "@/components/ui/pagination";
 
 const Insights = () => {
+  useEffect(() => {
+    document.title = "Insights | BlueMetric";
+  }, []);
+
   const { blogs } = useBlogContext();
   const [filteredInsights, setFilteredInsights] = useState(blogs);
   const [currentPage, setCurrentPage] = useState(1);

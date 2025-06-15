@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -29,6 +28,10 @@ import {
 } from "@/components/ui/dialog";
 
 const BlogManagement = () => {
+  useEffect(() => {
+    document.title = "Blog Management | BlueMetric";
+  }, []);
+
   const navigate = useNavigate();
   const { blogs, deleteBlog, categories } = useBlogContext();
   const [searchTerm, setSearchTerm] = useState("");

@@ -1,7 +1,11 @@
-
+import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 
 const Terms = () => {
+  useEffect(() => {
+    document.title = "Terms of Service | BlueMetric";
+  }, []);
+
   return (
     <Layout>
       <div className="min-h-screen bg-gray-50 py-16">

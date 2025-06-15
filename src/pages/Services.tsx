@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import ServiceHero from "@/components/services/ServiceHero";
 import ServiceCard from "@/components/services/ServiceCard";
@@ -8,6 +8,10 @@ import CallToAction from "@/components/home/CallToAction";
 import { FileText, TrendingUp, Settings, BookOpen } from "lucide-react";
 
 const Services = () => {
+  useEffect(() => {
+    document.title = "Our Services | BlueMetric";
+  }, []);
+
   const services = [
     {
       id: "bookkeeping",

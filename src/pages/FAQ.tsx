@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CallToAction from "@/components/home/CallToAction";
 
 const FAQ = () => {
+  useEffect(() => {
+    document.title = "FAQ | BlueMetric";
+  }, []);
+
   const faqCategories = [
     {
       category: "Understanding BlueMetric",

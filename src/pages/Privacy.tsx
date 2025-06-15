@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 
 const Privacy = () => {
+  useEffect(() => {
+    document.title = "Privacy Policy | BlueMetric";
+  }, []);
+
   return (
     <Layout>
       <div className="min-h-screen bg-gray-50 py-16">
