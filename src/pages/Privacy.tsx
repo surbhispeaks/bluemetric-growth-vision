@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 
@@ -100,7 +101,7 @@ const Privacy = () => {
                   <p className="text-gray-700">
                     <strong>BlueMetric</strong><br />
                     UF Innovate Hub<br />
-                    747 SW 2nd Ave.<br />
+                    747 SW 2nd Ave. Ste 190<br />
                     Gainesville, FL 32601<br />
                     Email: info@blue-metric.com
                   </p>

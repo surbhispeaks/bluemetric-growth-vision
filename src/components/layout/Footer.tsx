@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -102,7 +103,7 @@ const Footer = () => {
               <h3 className="font-montserrat font-semibold text-white text-lg mb-5 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-10 after:h-[3px] after:bg-bluemetric-blue">Contact</h3>
               <p className="text-gray-300 mb-3">
                 UF Innovate Hub<br />
-                747 SW 2nd Ave.<br />
+                747 SW 2nd Ave. Ste 190<br />
                 Gainesville, FL 32601
               </p>
               <p className="text-gray-300 mb-5">

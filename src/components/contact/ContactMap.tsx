@@ -2,8 +2,8 @@
 import { MapPin, ExternalLink } from "lucide-react";
 
 const ContactMap = () => {
-  // Coordinates for 747 SW 2nd Ave. Gainesville, FL 32601
-  const address = "747 SW 2nd Ave, Gainesville, FL 32601";
+  // Coordinates for 747 SW 2nd Ave. Ste 190, Gainesville, FL 32601
+  const address = "747 SW 2nd Ave, Ste 190, Gainesville, FL 32601";
   
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-bluemetric-lightgray/20">
@@ -19,7 +19,7 @@ const ContactMap = () => {
             </h4>
             <p className="text-gray-600 mb-4 leading-relaxed">
               UF Innovate Hub<br />
-              747 SW 2nd Ave.<br />
+              747 SW 2nd Ave. Ste 190<br />
               Gainesville, FL 32601
             </p>
             <p className="text-sm text-bluemetric-blue font-medium mb-6 bg-bluemetric-lightbg px-4 py-2 rounded-lg">
