@@ -56,6 +56,16 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/services#financial-modeling" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                    <span className="text-bluemetric-blue mr-2">›</span> Financial Modeling
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services#funding-readiness" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                    <span className="text-bluemetric-blue mr-2">›</span> Investment & Funding Prep
+                  </Link>
+                </li>
+                <li>
                   <Link to="/services#performance" className="text-gray-300 hover:text-white transition-colors flex items-center">
                     <span className="text-bluemetric-blue mr-2">›</span> Performance Metrics
                   </Link>
@@ -79,11 +89,6 @@ const Footer = () => {
                 <li>
                   <Link to="/about" className="text-gray-300 hover:text-white transition-colors flex items-center">
                     <span className="text-bluemetric-blue mr-2">›</span> About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/insights" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                    <span className="text-bluemetric-blue mr-2">›</span> Insights
                   </Link>
                 </li>
                 <li>

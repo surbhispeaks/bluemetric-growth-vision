@@ -81,17 +81,7 @@ const Navbar = () => {
             >
               About
             </Link>
-            <Link 
-              to="/insights" 
-              className={`relative px-4 py-2 rounded-lg font-montserrat transition-all duration-300 font-medium hover-underline ${
-                isActive('/insights') 
-                  ? 'text-primary bg-primary/10' 
-                  : 'text-foreground hover:text-primary hover:bg-accent'
-              }`}
-            >
-              Insights
-            </Link>
-            <Link 
+            <Link
               to="/faq" 
               className={`relative px-4 py-2 rounded-lg font-montserrat transition-all duration-300 font-medium hover-underline ${
                 isActive('/faq') 
@@ -177,18 +167,7 @@ const Navbar = () => {
               >
                 About
               </Link>
-              <Link 
-                to="/insights" 
-                className={`mobile-nav-link font-montserrat font-medium ${
-                  isActive('/insights') 
-                    ? 'text-primary bg-primary/10 border-l-4 border-primary' 
-                    : 'text-foreground hover:text-primary'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Insights
-              </Link>
-              <Link 
+              <Link
                 to="/faq" 
                 className={`mobile-nav-link font-montserrat font-medium ${
                   isActive('/faq') 

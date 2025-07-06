@@ -29,6 +29,38 @@ const Services = () => {
       imageType: "document" as "document"
     },
     {
+      id: "financial-modeling",
+      title: "Financial Modeling & Forecasting",
+      description: "We create comprehensive financial models that help you understand your business dynamics, plan for growth, and make data-driven strategic decisions with confidence about your financial future.",
+      deliverables: [
+        "Custom financial models tailored to your business structure",
+        "Revenue and expense forecasting with scenario planning",
+        "Cash flow projections and working capital analysis",
+        "Sensitivity analysis for key business variables",
+        "Growth planning and capacity modeling",
+        "Monthly model updates and variance analysis"
+      ],
+      difference: "Our financial models go beyond simple projections - we build dynamic tools that help you understand the 'what-if' scenarios and their impact on your business, enabling proactive rather than reactive management.",
+      icon: <TrendingUp size={32} />,
+      imageType: "chart" as "chart"
+    },
+    {
+      id: "funding-readiness",
+      title: "Investment & Funding Preparation",
+      description: "We prepare your business for investment opportunities and funding rounds by organizing financial documentation, creating investor-ready materials, and ensuring your financial story is compelling and transparent.",
+      deliverables: [
+        "Investor-ready financial statements and projections",
+        "Due diligence preparation and documentation organization",
+        "Business valuation analysis and benchmarking",
+        "Pitch deck financial section development",
+        "Data room setup with organized financial records",
+        "Ongoing investor relations financial support"
+      ],
+      difference: "Having worked with investment analysis, we understand what investors look for and can help position your financial story in the most compelling way while maintaining complete transparency and accuracy.",
+      icon: <BookOpen size={32} />,
+      imageType: "report" as "report"
+    },
+    {
       id: "performance",
       title: "Business Performance Metrics",
       description: "We identify and track the key performance indicators that truly matter for your specific business, providing clear insights into your company's financial health and growth trajectory.",

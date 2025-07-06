@@ -15,13 +15,12 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="lg:w-1/2 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-montserrat font-bold text-white leading-tight mb-6 lg:mb-8">
-              Bookkeeping and Beyond: <br />
               <span className="text-bluemetric-lightgray bg-gradient-to-r from-bluemetric-lightgray to-white bg-clip-text text-transparent">
-                Financial Clarity
+                Get Financial Clarity
               </span> for Your Business
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              We provide bookkeeping services and help transform your financial data into actionable business intelligence.
+              Everything from <span className="bg-gradient-to-r from-white to-bluemetric-lightgray bg-clip-text text-transparent font-semibold">bookkeeping</span> to <span className="bg-gradient-to-r from-white to-bluemetric-lightgray bg-clip-text text-transparent font-semibold">financial analysis</span> to transform your financial data into actionable business intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center lg:justify-start">
               <Link to="https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com/meetingtype/vTFKAnihlUCH9VBsEpnD4w2?anonymous&ep=mLinkFromTile">
