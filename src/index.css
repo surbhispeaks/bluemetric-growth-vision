@@ -26,41 +26,12 @@
     --ring: 217.2 91.2% 53.3%;
     --radius: 0.5rem;
 
-    /* BlueMetric custom light mode colors */
+    /* BlueMetric custom colors */
     --bluemetric-darkblue: 220 27% 15%;
     --bluemetric-mediumblue: 217.2 91.2% 53.3%;
     --bluemetric-blue: 217.2 91.2% 59.8%;
     --bluemetric-lightbg: 210 40% 98%;
     --bluemetric-lightgray: 215.4 16.3% 91.8%;
-  }
-
-  .dark {
-    --background: 220 27% 8%;
-    --foreground: 210 40% 98%;
-    --card: 220 27% 12%;
-    --card-foreground: 210 40% 98%;
-    --popover: 220 27% 12%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 220 27% 8%;
-    --secondary: 220 27% 18%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 220 27% 16%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 220 27% 16%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 220 27% 20%;
-    --input: 220 27% 18%;
-    --ring: 217.2 91.2% 59.8%;
-
-    /* BlueMetric custom dark mode colors */
-    --bluemetric-darkblue: 210 40% 92%;
-    --bluemetric-mediumblue: 217.2 91.2% 65%;
-    --bluemetric-blue: 217.2 91.2% 59.8%;
-    --bluemetric-lightbg: 220 27% 10%;
-    --bluemetric-lightgray: 220 27% 22%;
   }
 }
 
@@ -129,20 +100,10 @@
   }
 }
 
-/* Enhanced mobile-first card styles with dark mode support */
+/* Enhanced mobile-first card styles */
 .mobile-card {
   @apply w-full rounded-lg shadow-md p-4 sm:p-5 md:p-6 lg:p-8 bg-card text-card-foreground transition-all duration-500 hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1;
   backdrop-filter: blur(10px);
-}
-
-/* Enhanced dark mode card styles */
-.dark .mobile-card {
-  @apply shadow-2xl border border-border/20;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-}
-
-.dark .mobile-card:hover {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 /* Enhanced Animations */
@@ -272,7 +233,7 @@
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Enhanced hover effects with dark mode support */
+/* Enhanced hover effects */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -280,10 +241,6 @@
 .hover-lift:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.dark .hover-lift:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 .hover-scale {
@@ -301,10 +258,6 @@
 .hover-glow:hover {
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
   transform: translateY(-2px);
-}
-
-.dark .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
 }
 
 .hover-underline {
@@ -356,59 +309,14 @@
   }
 }
 
-/* Enhanced button hover effects with dark mode */
+/* Enhanced button hover effects */
 .btn-hover-primary {
   @apply transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95;
 }
 
-.dark .btn-hover-primary:hover {
-  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.6);
-}
-
-/* Mobile-first typography scale */
-@media (max-width: 475px) {
-  .text-responsive-xs { @apply text-xs; }
-  .text-responsive-sm { @apply text-sm; }
-  .text-responsive-base { @apply text-base; }
-  .text-responsive-lg { @apply text-lg; }
-  .text-responsive-xl { @apply text-xl; }
-  .text-responsive-2xl { @apply text-2xl; }
-  .text-responsive-3xl { @apply text-3xl; }
-  .text-responsive-4xl { @apply text-3xl; }
-  .text-responsive-5xl { @apply text-4xl; }
-}
-
-@media (min-width: 476px) and (max-width: 639px) {
-  .text-responsive-xs { @apply text-sm; }
-  .text-responsive-sm { @apply text-base; }
-  .text-responsive-base { @apply text-lg; }
-  .text-responsive-lg { @apply text-xl; }
-  .text-responsive-xl { @apply text-2xl; }
-  .text-responsive-2xl { @apply text-3xl; }
-  .text-responsive-3xl { @apply text-4xl; }
-  .text-responsive-4xl { @apply text-4xl; }
-  .text-responsive-5xl { @apply text-5xl; }
-}
-
-/* Enhanced mobile spacing */
-.mobile-spacing-sm { @apply p-2 sm:p-3 md:p-4; }
-.mobile-spacing-md { @apply p-4 sm:p-6 md:p-8; }
-.mobile-spacing-lg { @apply p-6 sm:p-8 md:p-10 lg:p-12; }
-
-/* Mobile-first grid utilities */
-.mobile-grid-1 { @apply grid grid-cols-1; }
-.mobile-grid-2 { @apply grid grid-cols-1 sm:grid-cols-2; }
-.mobile-grid-3 { @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3; }
-.mobile-grid-4 { @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4; }
-
 /* Enhanced focus states for accessibility */
 .focus-ring {
   @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background;
-}
-
-/* Dark mode focus improvements */
-.dark .focus-ring {
-  @apply focus:ring-primary/70 focus:ring-offset-background;
 }
 
 /* Card flip effect */

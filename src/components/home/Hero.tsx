@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-bluemetric-darkblue via-bluemetric-mediumblue to-bluemetric-darkblue dark:from-background dark:via-bluemetric-darkblue dark:to-background py-20 md:py-32 lg:py-40 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-bluemetric-darkblue via-bluemetric-mediumblue to-bluemetric-darkblue py-20 md:py-32 lg:py-40 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
@@ -36,7 +36,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="lg:w-1/2 lg:pl-8">
-            <div className="bg-white/95 dark:bg-card/95 backdrop-blur-sm rounded-2xl lg:rounded-3xl shadow-2xl dark:shadow-primary/10 p-6 lg:p-8 relative transform hover:scale-[1.02] transition-all duration-500 border border-white/20 dark:border-border/30 hover-lift">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl lg:rounded-3xl shadow-2xl p-6 lg:p-8 relative transform hover:scale-[1.02] transition-all duration-500 border border-white/20 hover-lift">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl lg:rounded-3xl"></div>
               <img 
                 src="/lovable-uploads/dfae76eb-cd72-4328-9a37-904fde3fbcf1.png" 

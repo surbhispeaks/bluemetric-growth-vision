@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme/ThemeToggle";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,8 +36,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`bg-background/98 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 border-b border-border/50 dark:bg-background/95 dark:border-border/30 ${
-      isScrolled ? 'shadow-lg dark:shadow-2xl py-2' : 'shadow-sm dark:shadow-lg py-4'
+    <nav className={`bg-background/98 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 border-b border-border/50 ${
+      isScrolled ? 'shadow-lg py-2' : 'shadow-sm py-4'
     }`}>
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
@@ -105,9 +105,8 @@ const Navbar = () => {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-3">
-            <ThemeToggle />
             <Link to="https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com?anonymous&ep=plink">
-              <Button className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground font-montserrat font-medium px-6 py-2.5 shadow-lg hover:shadow-xl dark:shadow-primary/20 dark:hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-0.5 hover-glow">
+              <Button className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground font-montserrat font-medium px-6 py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover-glow">
                 Book a Consultation
               </Button>
             </Link>
@@ -115,7 +114,6 @@ const Navbar = () => {
 
           {/* Mobile Navigation Button */}
           <div className="lg:hidden flex items-center space-x-2">
-            <ThemeToggle />
             <button
               onClick={toggleMenu}
               className="p-2 rounded-lg text-foreground hover:text-primary hover:bg-accent transition-all duration-300"
