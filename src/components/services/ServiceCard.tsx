@@ -23,24 +23,24 @@ const ServiceCard = ({
   imageType = "chart",
 }: ServiceCardProps) => {
   return (
-    <div id={id} className="py-16 lg:py-24 border-b border-bluemetric-lightgray/30 scroll-mt-24 last:border-b-0">
+    <div id={id} className="py-16 lg:py-24 border-b border-bluemetric-lightgray/30 dark:border-border/20 scroll-mt-24 last:border-b-0">
       <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-16 items-center`}>
         <div className="lg:w-1/2 space-y-8">
           <div className="flex items-center mb-6">
             <div className="bg-gradient-to-br from-bluemetric-blue/10 to-bluemetric-mediumblue/10 p-4 rounded-2xl text-bluemetric-blue mr-5 group-hover:scale-110 transition-transform duration-300">
               {icon}
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-bold text-bluemetric-darkblue leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-bold text-bluemetric-darkblue dark:text-foreground leading-tight">
               {title}
             </h2>
           </div>
           
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-gray-600 dark:text-muted-foreground text-lg leading-relaxed">
             {description}
           </p>
           
-          <div className="bg-bluemetric-lightbg p-6 lg:p-8 rounded-2xl border border-bluemetric-lightgray/30">
-            <h3 className="text-xl font-montserrat font-bold text-bluemetric-darkblue mb-5 flex items-center">
+          <div className="bg-bluemetric-lightbg dark:bg-card p-6 lg:p-8 rounded-2xl border border-bluemetric-lightgray/30 dark:border-border/30">
+            <h3 className="text-xl font-montserrat font-bold text-bluemetric-darkblue dark:text-card-foreground mb-5 flex items-center">
               <span className="w-2 h-2 bg-bluemetric-blue rounded-full mr-3"></span>
               What we deliver:
             </h3>
@@ -48,29 +48,29 @@ const ServiceCard = ({
               {deliverables.map((item, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-bluemetric-blue mr-3 font-bold text-lg leading-none mt-1">•</span>
-                  <span className="text-gray-700 leading-relaxed">{item}</span>
+                  <span className="text-gray-700 dark:text-card-foreground leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           
-          <div className="bg-white p-6 lg:p-8 rounded-2xl border-l-4 border-bluemetric-blue shadow-sm">
-            <h3 className="text-xl font-montserrat font-bold text-bluemetric-darkblue mb-4 flex items-center">
+          <div className="bg-white dark:bg-card p-6 lg:p-8 rounded-2xl border-l-4 border-bluemetric-blue shadow-sm dark:shadow-lg">
+            <h3 className="text-xl font-montserrat font-bold text-bluemetric-darkblue dark:text-card-foreground mb-4 flex items-center">
               <span className="w-2 h-2 bg-bluemetric-blue rounded-full mr-3"></span>
               The BlueMetric Difference:
             </h3>
-            <p className="text-gray-700 leading-relaxed italic">
+            <p className="text-gray-700 dark:text-card-foreground leading-relaxed italic">
               {difference}
             </p>
           </div>
         </div>
         
         <div className="lg:w-1/2 flex items-center justify-center">
-          <div className="bg-gradient-to-br from-bluemetric-lightbg to-white rounded-3xl p-8 lg:p-10 w-full max-w-lg shadow-xl border border-bluemetric-lightgray/30">
+          <div className="bg-gradient-to-br from-bluemetric-lightbg to-white dark:from-card dark:to-card/80 rounded-3xl p-8 lg:p-10 w-full max-w-lg shadow-xl dark:shadow-2xl border border-bluemetric-lightgray/30 dark:border-border/20">
             {imageType === "chart" && (
-              <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8 relative overflow-hidden border border-bluemetric-lightgray/20">
-                <div className="border-b border-bluemetric-lightgray/50 pb-4 mb-6">
-                  <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue">
+              <div className="bg-white dark:bg-background rounded-2xl shadow-lg dark:shadow-xl p-6 lg:p-8 relative overflow-hidden border border-bluemetric-lightgray/20 dark:border-border/30">
+                <div className="border-b border-bluemetric-lightgray/50 dark:border-border/30 pb-4 mb-6">
+                  <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue dark:text-foreground">
                     {title}
                   </h3>
                 </div>
@@ -92,9 +92,9 @@ const ServiceCard = ({
             )}
 
             {imageType === "document" && (
-              <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8 relative overflow-hidden border border-bluemetric-lightgray/20">
-                <div className="border-b border-bluemetric-lightgray/50 pb-4 mb-6">
-                  <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue">
+              <div className="bg-white dark:bg-background rounded-2xl shadow-lg dark:shadow-xl p-6 lg:p-8 relative overflow-hidden border border-bluemetric-lightgray/20 dark:border-border/30">
+                <div className="border-b border-bluemetric-lightgray/50 dark:border-border/30 pb-4 mb-6">
+                  <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue dark:text-foreground">
                     {title}
                   </h3>
                 </div>
@@ -113,29 +113,29 @@ const ServiceCard = ({
             )}
 
             {imageType === "dashboard" && (
-              <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8 relative overflow-hidden border border-bluemetric-lightgray/20">
-                <div className="border-b border-bluemetric-lightgray/50 pb-4 mb-6">
-                  <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue">
+              <div className="bg-white dark:bg-background rounded-2xl shadow-lg dark:shadow-xl p-6 lg:p-8 relative overflow-hidden border border-bluemetric-lightgray/20 dark:border-border/30">
+                <div className="border-b border-bluemetric-lightgray/50 dark:border-border/30 pb-4 mb-6">
+                  <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue dark:text-foreground">
                     {title}
                   </h3>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="border border-bluemetric-lightgray/50 rounded-xl p-4 bg-gradient-to-br from-bluemetric-lightbg to-white">
+                  <div className="border border-bluemetric-lightgray/50 dark:border-border/30 rounded-xl p-4 bg-gradient-to-br from-bluemetric-lightbg to-white dark:from-card dark:to-card/80">
                     <div className="h-2 bg-gradient-to-r from-bluemetric-blue to-bluemetric-mediumblue rounded-full w-3/4 mb-3"></div>
-                    <div className="text-xl font-bold text-bluemetric-darkblue">$24.5k</div>
+                    <div className="text-xl font-bold text-bluemetric-darkblue dark:text-foreground">$24.5k</div>
                   </div>
-                  <div className="border border-bluemetric-lightgray/50 rounded-xl p-4 bg-gradient-to-br from-bluemetric-lightbg to-white">
+                  <div className="border border-bluemetric-lightgray/50 dark:border-border/30 rounded-xl p-4 bg-gradient-to-br from-bluemetric-lightbg to-white dark:from-card dark:to-card/80">
                     <div className="h-2 bg-gradient-to-r from-bluemetric-blue to-bluemetric-mediumblue rounded-full w-3/4 mb-3"></div>
-                    <div className="text-xl font-bold text-bluemetric-darkblue">+12%</div>
+                    <div className="text-xl font-bold text-bluemetric-darkblue dark:text-foreground">+12%</div>
                   </div>
-                  <div className="border border-bluemetric-lightgray/50 rounded-xl p-4 bg-gradient-to-br from-bluemetric-lightbg to-white">
+                  <div className="border border-bluemetric-lightgray/50 dark:border-border/30 rounded-xl p-4 bg-gradient-to-br from-bluemetric-lightbg to-white dark:from-card dark:to-card/80">
                     <div className="h-2 bg-gradient-to-r from-bluemetric-blue to-bluemetric-mediumblue rounded-full w-3/4 mb-3"></div>
-                    <div className="text-xl font-bold text-bluemetric-darkblue">45</div>
+                    <div className="text-xl font-bold text-bluemetric-darkblue dark:text-foreground">45</div>
                   </div>
-                  <div className="border border-bluemetric-lightgray/50 rounded-xl p-4 bg-gradient-to-br from-bluemetric-lightbg to-white">
+                  <div className="border border-bluemetric-lightgray/50 dark:border-border/30 rounded-xl p-4 bg-gradient-to-br from-bluemetric-lightbg to-white dark:from-card dark:to-card/80">
                     <div className="h-2 bg-gradient-to-r from-bluemetric-blue to-bluemetric-mediumblue rounded-full w-3/4 mb-3"></div>
-                    <div className="text-xl font-bold text-bluemetric-darkblue">-3%</div>
+                    <div className="text-xl font-bold text-bluemetric-darkblue dark:text-foreground">-3%</div>
                   </div>
                 </div>
                 
@@ -151,9 +151,9 @@ const ServiceCard = ({
             )}
 
             {imageType === "report" && (
-              <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8 relative overflow-hidden border border-bluemetric-lightgray/20">
-                <div className="border-b border-bluemetric-lightgray/50 pb-4 mb-6">
-                  <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue">
+              <div className="bg-white dark:bg-background rounded-2xl shadow-lg dark:shadow-xl p-6 lg:p-8 relative overflow-hidden border border-bluemetric-lightgray/20 dark:border-border/30">
+                <div className="border-b border-bluemetric-lightgray/50 dark:border-border/30 pb-4 mb-6">
+                  <h3 className="text-xl lg:text-2xl font-montserrat font-bold text-bluemetric-darkblue dark:text-foreground">
                     {title}
                   </h3>
                 </div>

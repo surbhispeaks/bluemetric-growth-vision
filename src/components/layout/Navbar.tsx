@@ -36,8 +36,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`bg-background/95 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300 border-b border-border ${
-      isScrolled ? 'shadow-lg py-2' : 'shadow-sm py-4'
+    <nav className={`bg-background/98 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 border-b border-border/50 dark:bg-background/95 dark:border-border/30 ${
+      isScrolled ? 'shadow-lg dark:shadow-2xl py-2' : 'shadow-sm dark:shadow-lg py-4'
     }`}>
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
@@ -107,7 +107,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-3">
             <ThemeToggle />
             <Link to="https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com?anonymous&ep=plink">
-              <Button className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground font-montserrat font-medium px-6 py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover-glow">
+              <Button className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground font-montserrat font-medium px-6 py-2.5 shadow-lg hover:shadow-xl dark:shadow-primary/20 dark:hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-0.5 hover-glow">
                 Book a Consultation
               </Button>
             </Link>

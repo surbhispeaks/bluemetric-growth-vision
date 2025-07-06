@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <>
       <ScrollToTop />
-      <footer className="bg-bluemetric-darkblue text-white pt-16 pb-8">
+      <footer className="bg-bluemetric-darkblue dark:bg-background text-white dark:text-foreground pt-16 pb-8 border-t border-transparent dark:border-border/30">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             <div>
@@ -39,10 +39,10 @@ const Footer = () => {
                 alt="BlueMetric Logo" 
                 className="h-12 mb-6 brightness-0 invert"
               />
-              <p className="text-gray-300 mb-5">
+              <p className="text-gray-300 dark:text-muted-foreground mb-5">
                 Transforming financial data into actionable business intelligence.
               </p>
-              <p className="text-white text-xs uppercase font-montserrat tracking-wider font-semibold">
+              <p className="text-white dark:text-foreground text-xs uppercase font-montserrat tracking-wider font-semibold">
                 Numbers And Beyond
               </p>
             </div>
