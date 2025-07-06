@@ -65,7 +65,7 @@
     --accent: 220 27% 16%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62.8% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 27% 20%;
@@ -73,10 +73,10 @@
     --ring: 217.2 91.2% 59.8%;
 
     /* BlueMetric custom dark mode colors */
-    --bluemetric-darkblue: 220 27% 92%;
+    --bluemetric-darkblue: 210 40% 98%;
     --bluemetric-mediumblue: 217.2 91.2% 70%;
     --bluemetric-blue: 217.2 91.2% 59.8%;
-    --bluemetric-lightbg: 220 27% 15%;
+    --bluemetric-lightbg: 220 27% 12%;
     --bluemetric-lightgray: 220 27% 25%;
   }
 }

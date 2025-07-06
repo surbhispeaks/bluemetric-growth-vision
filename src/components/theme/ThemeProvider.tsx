@@ -27,7 +27,7 @@ export function ThemeProvider({
   storageKey = "bluemetric-ui-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
+  const [theme, setThemeState] = useState<Theme>(
     () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
   )
 
@@ -54,16 +54,16 @@ export function ThemeProvider({
       
       mediaQuery.addEventListener("change", handleChange)
       return () => mediaQuery.removeEventListener("change", handleChange)
+    } else {
+      root.classList.add(theme)
     }
-
-    root.classList.add(theme)
   }, [theme])
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme)
-      setTheme(theme)
+    setTheme: (newTheme: Theme) => {
+      localStorage.setItem(storageKey, newTheme)
+      setThemeState(newTheme)
     },
   }
 
