@@ -34,36 +34,50 @@
     --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
+
+    /* BlueMetric custom light mode colors */
+    --bluemetric-darkblue: 30 27% 8%;
+    --bluemetric-mediumblue: 217.2 91.2% 53.3%;
+    --bluemetric-blue: 217.2 91.2% 59.8%;
+    --bluemetric-lightbg: 210 40% 98%;
+    --bluemetric-lightgray: 215.4 16.3% 91.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 220 27% 8%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 220 27% 12%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 220 27% 12%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 84% 4.9%;
+    --primary-foreground: 220 27% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 220 27% 18%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
+    --muted: 220 27% 16%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 220 27% 16%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 94.1%;
+    --border: 220 27% 20%;
+    --input: 220 27% 18%;
+    --ring: 217.2 91.2% 59.8%;
+
+    /* BlueMetric custom dark mode colors */
+    --bluemetric-darkblue: 220 27% 92%;
+    --bluemetric-mediumblue: 217.2 91.2% 70%;
+    --bluemetric-blue: 217.2 91.2% 59.8%;
+    --bluemetric-lightbg: 220 27% 15%;
+    --bluemetric-lightgray: 220 27% 25%;
   }
 }
 
@@ -112,12 +126,23 @@
 /* Enhanced mobile-first card styles */
 .mobile-card {
   @apply w-full rounded-lg shadow-md p-5 bg-card text-card-foreground transition-all duration-500 hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1;
+  backdrop-filter: blur(10px);
 }
 
 @media (min-width: 768px) {
   .mobile-card {
     @apply p-8;
   }
+}
+
+/* Enhanced dark mode card styles */
+.dark .mobile-card {
+  @apply shadow-2xl border border-border/20;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark .mobile-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 /* Enhanced Animations */
@@ -257,6 +282,10 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
+.dark .hover-lift:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
 .hover-scale {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -272,6 +301,10 @@
 .hover-glow:hover {
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
   transform: translateY(-2px);
+}
+
+.dark .hover-glow:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
 }
 
 .hover-underline {
@@ -293,6 +326,79 @@
 
 .hover-underline:hover::after {
   transform: translateX(0);
+}
+
+/* Floating animation for cards */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse animation for interactive elements */
+.pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Enhanced button hover effects */
+.btn-hover-primary {
+  @apply transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95;
+}
+
+.dark .btn-hover-primary:hover {
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+}
+
+/* Card flip effect */
+.card-flip-container {
+  perspective: 1000px;
+}
+
+.card-flip {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-flip:hover {
+  transform: rotateY(180deg);
+}
+
+/* Gradient text animations */
+.gradient-text {
+  background: linear-gradient(-45deg, #3b82f6, #2563eb, #1d4ed8, #1e40af);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Button enhancements */

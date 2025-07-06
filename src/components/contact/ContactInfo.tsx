@@ -73,9 +73,11 @@ const ContactInfo = () => {
           </h4>
           <div className="flex space-x-4">
             <a 
-              href="#" 
+              href="https://www.linkedin.com/in/casurbhi/" 
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="bg-bluemetric-lightbg w-12 h-12 rounded-lg flex items-center justify-center text-bluemetric-darkblue hover:bg-bluemetric-blue hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+              className="bg-bluemetric-lightbg w-12 h-12 rounded-lg flex items-center justify-center text-bluemetric-darkblue hover:bg-bluemetric-blue hover:text-white transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -84,12 +86,14 @@ const ContactInfo = () => {
               </svg>
             </a>
             <a 
-              href="#" 
-              aria-label="Twitter"
-              className="bg-bluemetric-lightbg w-12 h-12 rounded-lg flex items-center justify-center text-bluemetric-darkblue hover:bg-bluemetric-blue hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+              href="https://x.com/ca_surbhi" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (formerly Twitter)"
+              className="bg-bluemetric-lightbg w-12 h-12 rounded-lg flex items-center justify-center text-bluemetric-darkblue hover:bg-bluemetric-blue hover:text-white transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
             </a>
           </div>

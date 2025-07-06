@@ -24,19 +24,19 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center lg:justify-start">
               <Link to="https://outlook.office.com/bookwithme/user/ea237c751c5f4ffcb4f1257dc6947314@blue-metric.com/meetingtype/vTFKAnihlUCH9VBsEpnD4w2?anonymous&ep=mLinkFromTile">
-                <Button className="bg-white hover:bg-bluemetric-lightgray text-bluemetric-darkblue font-montserrat font-semibold text-lg lg:text-xl px-8 lg:px-10 py-6 lg:py-8 h-auto shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 rounded-xl">
-                  Book a Consultation
-                </Button>
+  <Button className="bg-white hover:bg-bluemetric-lightgray text-bluemetric-darkblue font-montserrat font-semibold text-lg lg:text-xl px-8 lg:px-10 py-6 lg:py-8 h-auto shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 rounded-xl btn-hover-primary">
+                    Book a Consultation
+                  </Button>
               </Link>
               <Link to="/services">
-                <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 hover:border-white/80 font-montserrat font-semibold text-lg lg:text-xl px-8 lg:px-10 py-6 lg:py-8 h-auto bg-transparent transition-all duration-300 transform hover:scale-105 rounded-xl backdrop-blur-sm">
-                  Learn Our Approach
-                </Button>
+                  <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 hover:border-white/80 font-montserrat font-semibold text-lg lg:text-xl px-8 lg:px-10 py-6 lg:py-8 h-auto bg-transparent transition-all duration-300 transform hover:scale-105 rounded-xl backdrop-blur-sm btn-hover-primary">
+                    Learn Our Approach
+                  </Button>
               </Link>
             </div>
           </div>
           <div className="lg:w-1/2 lg:pl-8">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl lg:rounded-3xl shadow-2xl p-6 lg:p-8 relative transform hover:scale-[1.02] transition-all duration-500 border border-white/20">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl lg:rounded-3xl shadow-2xl p-6 lg:p-8 relative transform hover:scale-[1.02] transition-all duration-500 border border-white/20 hover-lift">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl lg:rounded-3xl"></div>
               <img 
                 src="/lovable-uploads/dfae76eb-cd72-4328-9a37-904fde3fbcf1.png" 

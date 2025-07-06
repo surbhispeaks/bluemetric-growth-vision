@@ -34,11 +34,11 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				bluemetric: {
-					darkblue: '#1e3a8a',
-					blue: '#3b82f6',
-					mediumblue: '#2563eb',
-					lightgray: '#e2e8f0',
-					lightbg: '#f8fafc',
+					darkblue: 'hsl(var(--bluemetric-darkblue, 30 27% 8%))',
+					blue: 'hsl(var(--bluemetric-blue, 217.2 91.2% 59.8%))',
+					mediumblue: 'hsl(var(--bluemetric-mediumblue, 217.2 91.2% 53.3%))',
+					lightgray: 'hsl(var(--bluemetric-lightgray, 215.4 16.3% 91.8%))',
+					lightbg: 'hsl(var(--bluemetric-lightbg, 210 40% 98%))',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
