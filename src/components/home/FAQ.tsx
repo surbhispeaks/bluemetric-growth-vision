@@ -33,33 +33,33 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 sm:py-20 bg-background dark:bg-background">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-montserrat font-semibold text-bluemetric-darkblue text-sm uppercase tracking-wider mb-2">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="font-montserrat font-semibold text-bluemetric-darkblue dark:text-bluemetric-darkblue text-xs sm:text-sm uppercase tracking-wider mb-2">
             Frequently Asked Questions
           </h2>
-          <div className="w-20 h-1 bg-bluemetric-blue mx-auto mb-6"></div>
-          <h3 className="text-3xl md:text-4xl font-montserrat font-semibold text-bluemetric-darkblue mb-6">
+          <div className="w-16 sm:w-20 h-1 bg-bluemetric-blue mx-auto mb-4 sm:mb-6"></div>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-semibold text-bluemetric-darkblue dark:text-bluemetric-darkblue mb-4 sm:mb-6">
             Got Questions? We Have Answers
           </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-base sm:text-lg">
             Here are answers to some common questions about our services and approach.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-6">
+          <Accordion type="single" collapsible className="space-y-4 sm:space-y-6">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`} 
-                className="border border-bluemetric-lightgray rounded-lg overflow-hidden"
+                className="border border-bluemetric-lightgray dark:border-bluemetric-lightgray/20 rounded-lg overflow-hidden"
               >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-bluemetric-lightbg font-montserrat font-medium text-bluemetric-darkblue text-left">
+                <AccordionTrigger className="px-4 sm:px-6 py-3 sm:py-4 hover:no-underline hover:bg-bluemetric-lightbg dark:hover:bg-bluemetric-lightgray/20 font-montserrat font-medium text-bluemetric-darkblue dark:text-bluemetric-darkblue text-left text-base sm:text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 py-4 text-gray-600">
+                <AccordionContent className="px-4 sm:px-6 py-3 sm:py-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -67,10 +67,10 @@ const FAQ = () => {
           </Accordion>
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12">
           <Link 
             to="/faq" 
-            className="inline-flex items-center text-bluemetric-blue hover:text-bluemetric-mediumblue font-montserrat font-medium transition-colors"
+            className="inline-flex items-center text-bluemetric-blue hover:text-bluemetric-mediumblue font-montserrat font-medium transition-colors text-base sm:text-lg"
           >
             View all FAQs
             <ChevronRight className="ml-2 h-4 w-4" />
