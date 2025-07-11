@@ -31,19 +31,23 @@ const Founder = () => {
               
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  Surbhi brings a unique perspective to business finances, combining expertise in accounting, investment analysis, and entrepreneurship.
+                  After years of working in investment analysis and watching countless businesses struggle with their finances, Surbhi had a realization: most business owners weren't getting the financial support they actually needed. They were drowning in spreadsheets that felt like homework, getting more questions instead of answers from their financial advisors, and treating their numbers as a necessary evil rather than a strategic advantage.
                 </p>
                 
                 <p>
-                  With qualifications including CFA, Chartered Accountancy (India), and Company Secretaryship (India), Surbhi offers both technical excellence and strategic insight.
+                  That's what led her to found BlueMetric.
                 </p>
                 
                 <p>
-                  Her approach has been shaped by analyzing businesses across more than 20 sectors and launching entrepreneurial ventures, giving her a comprehensive understanding of business challenges and opportunities.
+                  With over a decade of experience spanning investment analysis, accounting, and entrepreneurship across more than 20 industries, Surbhi brings a unique perspective that combines deep technical expertise with real-world business understanding. Her qualifications include CFA, Chartered Accountancy (India), and Company Secretaryship (India) – but what really drives her work is seeing business owners finally "get" their numbers and feel confident making financial decisions.
                 </p>
                 
                 <p>
-                  Based at UF Innovate Hub, Surbhi is actively involved in Gainesville's business ecosystem while maintaining a global perspective through her international background.
+                  Based at UF Innovate Hub in Gainesville, Surbhi is deeply involved in the local business ecosystem while maintaining a global perspective through her international background. She's launched her own ventures, analyzed everything from tech startups to manufacturing companies, and has seen firsthand what works (and what doesn't) when it comes to business finances.
+                </p>
+                
+                <p>
+                  Her approach is simple: financial information shouldn't feel like a compliance burden. It should be your most valuable strategic asset, giving you clarity and confidence to grow your business exactly the way you envision.
                 </p>
                 
                 <blockquote className="border-l-4 border-bluemetric-blue pl-6 italic my-8 text-xl text-bluemetric-darkblue bg-bluemetric-lightbg/30 py-6 pr-6 rounded-r-lg">
