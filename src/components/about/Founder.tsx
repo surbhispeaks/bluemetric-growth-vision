@@ -16,6 +16,10 @@ const Founder = () => {
                   height="400"
                 />
               </div>
+              
+              <blockquote className="border-l-4 border-bluemetric-blue pl-6 italic mt-8 text-xl text-bluemetric-darkblue bg-bluemetric-lightbg/30 py-6 pr-6 rounded-r-lg">
+                "My goal is to transform how businesses view their financial information—not as a compliance requirement, but as their most valuable strategic asset."
+              </blockquote>
             </div>
             
             <div className="order-1 lg:order-2">
@@ -49,10 +53,6 @@ const Founder = () => {
                 <p>
                   Her approach is simple: financial information shouldn't feel like a compliance burden. It should be your most valuable strategic asset, giving you clarity and confidence to grow your business exactly the way you envision.
                 </p>
-                
-                <blockquote className="border-l-4 border-bluemetric-blue pl-6 italic my-8 text-xl text-bluemetric-darkblue bg-bluemetric-lightbg/30 py-6 pr-6 rounded-r-lg">
-                  "My goal is to transform how businesses view their financial information—not as a compliance requirement, but as their most valuable strategic asset."
-                </blockquote>
               </div>
             </div>
           </div>
