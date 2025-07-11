@@ -17,7 +17,7 @@ const Founder = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 xl:gap-20 items-start">
             {/* Image and Quote Column */}
-            <div className="order-2 lg:order-1 lg:col-span-2">
+            <div className="order-1 lg:order-1 lg:col-span-2">
               <div className="lg:sticky lg:top-8">
                 <div className="group bg-gradient-to-br from-bluemetric-lightbg via-white to-bluemetric-lightbg/50 p-6 md:p-8 rounded-3xl shadow-2xl border border-bluemetric-lightgray/20 relative overflow-hidden transition-all duration-500 hover:shadow-3xl hover:scale-[1.02] hover:border-bluemetric-blue/30">
                   <div className="absolute inset-0 bg-gradient-to-br from-bluemetric-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -34,19 +34,25 @@ const Founder = () => {
                 </div>
                 
                 <div className="group mt-8 relative">
-                  <blockquote className="border-l-4 border-bluemetric-blue pl-6 md:pl-8 italic text-lg md:text-xl text-bluemetric-darkblue bg-gradient-to-r from-bluemetric-lightbg/40 to-transparent py-6 md:py-8 pr-6 md:pr-8 rounded-r-lg relative transition-all duration-300 hover:from-bluemetric-lightbg/60 hover:border-bluemetric-mediumblue hover:shadow-lg">
-                    <div className="absolute -top-2 -left-1 text-bluemetric-blue/30 text-4xl md:text-5xl font-serif leading-none">"</div>
-                    <p className="relative z-10 leading-relaxed pt-4">
-                      My goal is to transform how businesses view their financial information—not as a compliance requirement, but as their most valuable strategic asset.
-                    </p>
-                    <div className="absolute -bottom-2 -right-1 text-bluemetric-blue/30 text-4xl md:text-5xl font-serif leading-none">"</div>
-                  </blockquote>
+                  <div className="bg-gradient-to-br from-bluemetric-lightbg/60 via-white/80 to-bluemetric-mediumblue/10 p-6 md:p-8 rounded-2xl shadow-xl border border-bluemetric-blue/20 relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-bluemetric-mediumblue/40 hover:-translate-y-1">
+                    <div className="absolute inset-0 bg-gradient-to-br from-bluemetric-blue/5 to-bluemetric-mediumblue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute top-2 left-2 text-bluemetric-blue/20 text-5xl md:text-6xl font-serif leading-none">"</div>
+                    <div className="absolute bottom-2 right-2 text-bluemetric-blue/20 text-5xl md:text-6xl font-serif leading-none">"</div>
+                    <blockquote className="relative z-10 pt-6 pb-6">
+                      <p className="text-lg md:text-xl italic text-bluemetric-darkblue leading-relaxed font-medium">
+                        My goal is to transform how businesses view their financial information—not as a compliance requirement, but as their most valuable strategic asset.
+                      </p>
+                      <cite className="block text-right text-sm md:text-base text-bluemetric-blue font-montserrat font-semibold mt-4 not-italic">
+                        — Surbhi Aggarwal, CFA
+                      </cite>
+                    </blockquote>
+                  </div>
                 </div>
               </div>
             </div>
             
             {/* Content Column */}
-            <div className="order-1 lg:order-2 lg:col-span-3">
+            <div className="order-2 lg:order-2 lg:col-span-3">
               <div className="space-y-6 md:space-y-8 text-gray-600 text-base md:text-lg leading-relaxed">
                 <div className="group bg-gradient-to-r from-bluemetric-lightbg/30 to-transparent p-4 md:p-6 rounded-2xl border-l-4 border-bluemetric-blue/30 transition-all duration-300 hover:from-bluemetric-lightbg/50 hover:shadow-lg hover:border-bluemetric-blue/50 hover:-translate-y-1">
                   <p className="text-lg md:text-xl font-medium text-bluemetric-darkblue mb-3 md:mb-4">The Problem She Saw</p>
